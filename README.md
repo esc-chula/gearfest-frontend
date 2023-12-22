@@ -1,4 +1,4 @@
-# OPH66
+# GearFestival Frontend
 
 Frontend interface for the GearFestival website.
 
