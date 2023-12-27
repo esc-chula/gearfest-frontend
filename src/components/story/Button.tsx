@@ -1,11 +1,17 @@
+import { addScores } from '../../store/score.ts';
+
 interface Props {
   text: string;
+  scoreArray: Array<number>;
+  redirect: string;
 }
 
-const Button = ({ text }: Props) => {
+const Button = ({ text, scoreArray, redirect}: Props) => {
   const handleClick = () => {
     // TODO: implement logic of incrementing scores
     // After that, go to the next page
+    addScores(scoreArray);
+    location.href = redirect;
   };
 
   return (
