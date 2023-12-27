@@ -8,8 +8,6 @@ interface Props {
 
 const Button = ({ text, scoreArray, redirect}: Props) => {
   const handleClick = () => {
-    // TODO: implement logic of incrementing scores
-    // After that, go to the next page
     addScores(scoreArray);
     location.href = redirect;
   };
