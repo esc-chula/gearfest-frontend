@@ -1,0 +1,51 @@
+---
+import { supabase } from "@/lib/supabase";
+
+async function signInWithGoogle() {
+  try {
+    console.log("pass");
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
+
+    if (error) {
+      console.error("Authentication error:", error.message);
+    } else {
+      console.log("Authentication successful:", data);
+    }
+  } catch (error) {
+    console.error("Error during authentication:", error.message);
+  }
+}
+
+const signInWithGoogle3 = async() => {
+  console.log("pass");
+  try {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
+
+    if (error) {
+      console.error("Authentication error:", error.message);
+    } else {
+      console.log("Authentication successful:", data);
+    }
+  } catch (error) {
+    console.error("Error during authentication:", error.message);
+  }
+};
+
+const signInWithGoogle2 = () => {
+  console.log("pass");
+  const supabaseUrl = 'https://mofzxdvnypunptivwhjw.supabase.co';
+  window.location.href = `${supabaseUrl}/auth/v1/authorize?provider=google`;
+};
+
+const handleClick = () => {
+  signInWithGoogle();
+};
+
+document.querySelector('button').addEventListener('click', handleClick);
+---
+
+<button>Sign In with Google</button>
