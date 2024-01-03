@@ -2,8 +2,9 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Card from "@/components/story/Card.tsx";
 import ButtonSet from "@/components/story/ButtonSet.tsx";
+import FooterDecorator from "@/components/story/FooterDecorator.tsx"
 
-const img = "/images/cocktail/Summer berry sangria.PNG"
+const img = "/images/cocktail/Summer berry sangria.png"
 const bg = "raspberrybox"
 const accent = "salmon"
 const download = `/images/elements/download-${accent}.svg`
@@ -31,6 +32,7 @@ const download = `/images/elements/download-${accent}.svg`
 	        — Taylor swift
         </Card>
         <ButtonSet client:load accent={accent} bg={bg} img={download}/>
+        <FooterDecorator/>
     </div>
 </BaseLayout>
   

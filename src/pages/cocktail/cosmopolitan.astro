@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Card from "@/components/story/Card.tsx";
 import ButtonSet from "@/components/story/ButtonSet.tsx";
+import FooterDecorator from "@/components/story/FooterDecorator.tsx"
 
 const img = "/images/cocktail/Cosmopolitan.PNG"
 const bg = "cosmobox"
@@ -28,6 +29,7 @@ const download = `/images/elements/download-${accent}.svg`
             
         </Card>
         <ButtonSet client:load accent={accent} bg={bg} img={download}/>
+        <FooterDecorator/>
     </div>
 </BaseLayout>
   

@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Card from "@/components/story/Card.tsx";
 import ButtonSet from "@/components/story/ButtonSet.tsx";
+import FooterDecorator from "@/components/story/FooterDecorator.tsx"
 
 const img = "/images/cocktail/Blue lagoon.PNG"
 const bg = "lagoonbox"
@@ -13,10 +14,15 @@ const download = `/images/elements/download-${accent}.svg`
     <!-- TODO: Customize other cocktail types -->
     <div class="w-full flex flex-col gap-4 items-center justify-center bg-cover bg-repeat bg-lagoon pb-16">
         <img src="/images/elements/heartlogo.png" class="w-20 mx-auto mt-8">
-        <Card client:load name="Gin and Tonic" img={img} bg={bg} accent={accent}>
-            บลู ลากูน – เครื่องดื่มสีสดใสที่เกิดจากการผสมกันระหว่าง วอดก้า บลูคูราโซ่ และน้ำมะนาว เนื่องด้วยรสชาติที่ให้ความสดชื่น และสีสันที่สวยงามจึงเป็นเครื่องดื่มที่มักเป็นที่นิยมในงานสังสรรค์
+        <Card client:load name="Blue Lagoon" img={img} bg={bg} accent={accent}>
+            บลู ลากูน – เครื่องดื่มสีสดใสที่เกิดจากการผสมกันระหว่าง
+            วอดก้า บลูคูราโซ่ และน้ำมะนาว เนื่องด้วยรสชาติที่ให้ความสดชื่น และสีสันที่สวยงามจึงเป็นเครื่องดื่มที่มักเป็นที่นิยมในงานสังสรรค์
 
-            คุณเปรียบเสมือนค็อกเทลดังกล่าว คุณเป็นมนุษย์ที่ชอบเข้าสังคม สดใส ร่าเริง ชอบพูดคุยและทำความรู้จักกับผู้คนใหม่ ๆ เปรียบเหมือนผีเสื้อที่บินไปหาดอกไม้มากมาย คุณเป็นคนที่มีความเป็นเด็กน้อยในตัวสูง ตื่นเต้นกับสิ่งที่แปลกใหม่รอบตัวจนในบางทีคุณอาจจะมีแนวโน้มที่จะเป็นคนเบื่อง่าย และถึงแม้ภายนอกคุณจะดูสดใส แต่จริง ๆ คุณก็มีมุมที่มีความลึกลับที่คนนอกอาจจะเข้าไม่ถึง
+            คุณเปรียบเสมือนค็อกเทลดังกล่าว คุณเป็นมนุษย์ที่ชอบเข้าสังคม สดใส ร่าเริง ชอบพูดคุยและทำความรู้จักกับผู้คนใหม่ ๆ 
+            เปรียบเหมือนผีเสื้อที่บินไปหาดอกไม้มากมาย
+            
+            คุณเป็นคนที่มีความเป็นเด็กน้อยในตัวสูง ตื่นเต้นกับสิ่งที่แปลกใหม่รอบตัวจนในบางทีคุณอาจจะมีแนวโน้มที่จะเป็นคนเบื่อง่าย 
+            และถึงแม้ภายนอกคุณจะดูสดใส แต่จริง ๆ คุณก็มีมุมที่มีความลึกลับที่คนนอกอาจจะเข้าไม่ถึง
             
             “Love has absolutely no pattern, and no one will ever be perfect“
                 — Taylor swift
@@ -25,6 +31,7 @@ const download = `/images/elements/download-${accent}.svg`
             
         </Card>
         <ButtonSet client:load accent={accent} bg={bg} img={download}/>
+        <FooterDecorator/>
     </div>
 </BaseLayout>
   
