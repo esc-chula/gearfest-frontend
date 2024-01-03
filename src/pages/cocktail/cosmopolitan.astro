@@ -12,7 +12,7 @@ const download = `/images/elements/download-${accent}.svg`
 
 <BaseLayout>
     <!-- TODO: Customize other cocktail types -->
-    <div class="w-full flex flex-col gap-4 items-center justify-center bg-cover bg-repeat bg-cosmo pb-16">
+    <div id="cosmo" class="w-full flex flex-col gap-4 items-center justify-center bg-cover bg-repeat bg-cosmo pb-16">
         <img src="/images/elements/heartlogo.png" class="w-20 mx-auto mt-8">
         <Card client:load name="Cosmopolitan" img={img} bg={bg} accent={accent}>
             วอดก้า แครนเบอรี่ และน้ำมะนาว สามส่วนผสมหลักที่เข้ากันได้อย่างไม่น่าเชื่อ 
@@ -28,8 +28,8 @@ const download = `/images/elements/download-${accent}.svg`
                 — Taylor swift
             
         </Card>
-        <ButtonSet client:load accent={accent} bg={bg} img={download}/>
         <FooterDecorator/>
+        <ButtonSet client:load accent={accent} bg={bg} img={download} id="cosmo"/>
     </div>
 </BaseLayout>
   

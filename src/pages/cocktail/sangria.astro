@@ -4,7 +4,7 @@ import Card from "@/components/story/Card.tsx";
 import ButtonSet from "@/components/story/ButtonSet.tsx";
 import FooterDecorator from "@/components/story/FooterDecorator.tsx"
 
-const img = "/images/cocktail/Summer berry sangria.png"
+const img = "/images/cocktail/Summer berry sangria.PNG"
 const bg = "raspberrybox"
 const accent = "salmon"
 const download = `/images/elements/download-${accent}.svg`
@@ -12,7 +12,7 @@ const download = `/images/elements/download-${accent}.svg`
 
 <BaseLayout>
     <!-- TODO: Customize other cocktail types -->
-    <div class="w-full flex flex-col gap-4 items-center justify-center bg-cover bg-repeat bg-raspberry pb-16">
+    <div id="sangria" class="w-full flex flex-col gap-4 items-center justify-center bg-cover bg-repeat bg-raspberry pb-16">
         <img src="/images/elements/heartlogo.png" class="w-20 mx-auto mt-8">
         <Card client:load name="Summer Berry Sangria" img={img} bg={bg} accent={accent}>
             เครื่องดื่มสีสดใสที่ประกอบไปด้วยไวน์ขาว, เตกีล่า, น้ำผลไม้, บลูเบอร์รี่, สตรอเบอร์รี่, ราสเบอร์รี่ และ เลม่อนโซดา
@@ -31,8 +31,8 @@ const download = `/images/elements/download-${accent}.svg`
             and no one will ever be perfect“
 	        — Taylor swift
         </Card>
-        <ButtonSet client:load accent={accent} bg={bg} img={download}/>
         <FooterDecorator/>
+        <ButtonSet client:load accent={accent} bg={bg} img={download} id="sangria"/>
     </div>
 </BaseLayout>
   
