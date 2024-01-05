@@ -35,6 +35,9 @@ dependencies:
   framer-motion:
     specifier: 10.16.16
     version: 10.16.16(react-dom@18.2.0)(react@18.2.0)
+  html-to-image:
+    specifier: 1.11.11
+    version: 1.11.11
   nanostores:
     specifier: 0.9.5
     version: 0.9.5
@@ -2893,6 +2896,10 @@ packages:
 
   /html-escaper@3.0.3:
     resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
+    dev: false
+
+  /html-to-image@1.11.11:
+    resolution: {integrity: sha512-9gux8QhvjRO/erSnDPv28noDZcPZmYE7e1vFsBLKLlRlKDSqNJYebj6Qz1TGd5lsRV+X+xYyjCKjuZdABinWjA==}
     dev: false
 
   /html-void-elements@3.0.0:

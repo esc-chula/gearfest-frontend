@@ -29,7 +29,7 @@ const ButtonSet = ({accent, bg, img, id}: Props) => {
 
   const downloadImage = () => {
     document.getElementById("buttonSet").style.visibility = "hidden";
-    htmlToImage.toPng(document.getElementById(id))
+    htmlToImage.toJpeg(document.getElementById(id),{quality:1})
     .then(function (dataUrl) {
       const link = document.createElement('a');
       link.download = 'result.jpeg';
