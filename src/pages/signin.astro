@@ -1,46 +1,44 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import SignInBackground from "@/layouts/SignInBackground.astro";
 import { Image } from "astro:assets";
 import BarImage from "@/public/images/bar.png";
 ---
 
 <!-- TODO: Implement the logic for the Google OAuth -->
 <BaseLayout pageTitle="Login">
-  <div class="bg-signin flex w-full items-center justify-center bg-cover px-14">
-    <div class="absolute top-20 flex">
-      <Image
-        src="/public/logo/esc-logo.png"
-        alt="ESC Logo"
-        width="92"
-        height="92"
-      />
-      <Image
-        src="/public/logo/gearfest-logo.png"
-        alt="Gear Festival 2023 Logo"
-        width="92"
-        height="92"
-      />
-      <Image
-        src="/public/logo/kntu-logo.png"
-        alt="KNTU Logo"
-        width="92"
-        height="92"
-      />
-    </div>
-    <div class="w-full space-y-12">
-      <div
-        class="flex h-72 w-full items-end overflow-hidden rounded-lg bg-white"
-      >
-        <Image src={BarImage} alt="Bar Image" />
+  <SignInBackground>
+    <div class="relative flex h-full w-full items-center justify-center px-14">
+      <div class="absolute top-20 flex">
+        <Image src="/logo/esc-logo.png" alt="ESC Logo" width="92" height="92" />
+        <Image
+          src="/logo/gearfest-logo.png"
+          alt="Gear Festival 2023 Logo"
+          width="92"
+          height="92"
+        />
+        <Image
+          src="/logo/kntu-logo.png"
+          alt="KNTU Logo"
+          width="92"
+          height="92"
+        />
       </div>
-      <div>
-        <button
-          class="shadow-button bg-base text-primary flex h-fit w-full flex-wrap items-center justify-center gap-6 rounded-lg px-4 py-2.5 text-center text-2xl font-semibold"
+      <div class="w-full space-y-12">
+        <div
+          class="flex h-72 w-full items-end overflow-hidden rounded-lg bg-white"
         >
-          <i class="icon-[devicon--google] h-7 w-7"></i>
-           Register with Google
-        </button>
+          <Image src={BarImage} alt="Bar Image" />
+        </div>
+        <div>
+          <button
+            class="flex h-fit w-full flex-wrap items-center justify-center gap-6 rounded-lg bg-base px-4 py-2.5 text-center text-2xl font-semibold text-primary shadow-button"
+          >
+            <i class="icon-[devicon--google] h-7 w-7"></i>
+             Register with Google
+          </button>
+        </div>
       </div>
     </div>
-  </div>
+  </SignInBackground>
 </BaseLayout>
