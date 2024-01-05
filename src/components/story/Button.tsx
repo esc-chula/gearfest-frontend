@@ -1,4 +1,4 @@
-import { addScores } from '../../store/score.ts';
+import { addScores } from "../../store/score.ts";
 
 interface Props {
   text: string;
@@ -6,7 +6,7 @@ interface Props {
   redirect: string;
 }
 
-const Button = ({ text, scoreArray, redirect}: Props) => {
+const Button = ({ text, scoreArray, redirect }: Props) => {
   const handleClick = () => {
     addScores(scoreArray);
     location.href = redirect;

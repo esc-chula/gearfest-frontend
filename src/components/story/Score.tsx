@@ -1,5 +1,5 @@
-import scores from '../../store/score.ts';
-const score = scores.get()
+import scores from "../../store/score.ts";
+const score = scores.get();
 const Score = () => {
   return (
     <div className="flex items-center justify-center gap-2 text-center text-3xl font-bold">
