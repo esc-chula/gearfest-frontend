@@ -1,17 +1,18 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Button from "@/components/story/Button.tsx";
+import Button from "@/components/story/AnsButton";
 import Score from "@/components/story/Score.tsx";
 ---
 
 <BaseLayout>
     <div class="bg-[url('/images/NoAnimationStory/bg_bar.JPG')] bg-cover h-screen w-screen">
-        <section class="flex w-full flex-col items-center justify-center gap-8">
+        <div class="flex w-full flex-col items-center justify-center gap-8">
             <Score client:only />
             <Button client:load text="Option 1" />
             <Button client:load text="Option 2" />
             <Button client:load text="Option 3" />
             <Button client:load text="Option 4" />
-        </section>
+        </div>
     </div>
 </BaseLayout>
+@/components/story/AnsButton
