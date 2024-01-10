@@ -1,5 +1,4 @@
 ---
-import bg from "../../../public/images/NoAnimationStory/bg_bar.JPG";
 import {
   BackgroundImage,
   ImageSupportDetection,
@@ -15,10 +14,10 @@ const content = await fetch(import.meta.env.CONTENT_URL).then((r) => r.text());
 
   <body>
     <BackgroundImage
-      src="/src/images/landscape.jpg"
+      src="/images/NoAnimationStory/bg_bar.JPG"
       artDirectives={[
         {
-          src: "/src/images/portrait.jpg",
+        //   src: "/src/images/portrait.jpg",
           media: "(orientation: potrait)",
         },
       ]}
