@@ -1,6 +1,13 @@
 import { persistentAtom } from "@nanostores/persistent";
 
-const initialValue: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
+const initialValue: Record<number, number> = {
+  1: 0,
+  2: 0,
+  3: 0,
+  4: 0,
+  5: 0,
+  6: 0,
+};
 
 const scores = persistentAtom("scores", initialValue, {
   encode: JSON.stringify,
