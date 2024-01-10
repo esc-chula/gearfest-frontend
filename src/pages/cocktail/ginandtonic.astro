@@ -2,37 +2,36 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Card from "@/components/story/Card.tsx";
 import ButtonSet from "@/components/story/ButtonSet.tsx";
-import FooterDecorator from "@/components/story/FooterDecorator.tsx"
+import FooterDecorator from "@/components/story/FooterDecorator.tsx";
 
-const img = "/images/cocktail/Gin and tonic.PNG"
-const bg = "ginbox"
-const accent = "leaf"
-const download = `/images/elements/download-${accent}.svg`
+const img = "/images/cocktail/Gin and tonic.PNG";
+const bg = "ginbox";
+const accent = "leaf";
+const download = `/images/elements/download-${accent}.svg`;
 ---
 
 <BaseLayout>
-    <!-- TODO: Customize other cocktail types -->
-    <div class="w-full flex flex-col gap-4 items-center justify-center bg-cover bg-repeat bg-gin pb-32">
-        <img src="/images/elements/heartlogo.png" class="w-20 mx-auto mt-8">
-        <Card client:load name="Gin and Tonic" img={img} bg={bg} accent={accent}>
-            ด้วยรสซิตรัสจาก “จิน” สุรากลั่นจากเมล็ดข้าวซึ่งมีกลิ่นหอมสดชื่นอันเป็นเอกลักษณ์จากผลจูนิเปอร์ ผสมผสานกับ “โทนิค” เครื่องดื่มอัดแก๊สรสขมเพิ่มความซาบซ่า ทำให้ค็อกเทลรสชาติจัดจ้านนี้กลายมาเป็นค็อกเทลยอดนิยมทั่วโลก
+  <!-- TODO: Customize other cocktail types -->
+  <div
+    class="flex w-full flex-col items-center justify-center gap-4 bg-gin bg-cover bg-repeat pb-32"
+  >
+    <img src="/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
+    <Card client:load name="Gin and Tonic" img={img} bg={bg} accent={accent}>
+      ด้วยรสซิตรัสจาก “จิน” สุรากลั่นจากเมล็ดข้าวซึ่งมีกลิ่นหอมสดชื่นอันเป็นเอกลักษณ์จากผลจูนิเปอร์ ผสมผสานกับ “โทนิค” เครื่องดื่มอัดแก๊สรสขมเพิ่มความซาบซ่า ทำให้ค็อกเทลรสชาติจัดจ้านนี้กลายมาเป็นค็อกเทลยอดนิยมทั่วโลก
 
-            คุณเปรียบเสมือนค็อกเทลดังกล่าว 
-            คุณเป็นมนุษย์ผู้รักความสมบูรณ์แบบ มักจะรู้สึกหงุดหงิดเมื่อผู้คนรอบข้างปฏิบัติตัวไม่ตรงตามสิ่งที่คุณคาดหวังให้พวกเขาทำ 
-            คุณเป็นคนที่หนักแน่นและซื่อสัตย์กับความรู้สึกของตนเอง 
-            ยอมหักไม่ยอมงอ นอกจากนี้คุณยังใช้ชีวิตอย่างมีแบบแผน
-            และตั้งอยู่บนหลักความเป็นจริง 
-            
-            แต่ในบางครั้งคุณยึดติดกับแบบแผนของตนเองมากเกินไปจนละเลยความรู้สึกของคนรอบตัว 
-            อย่าลืมที่จะปลอยวางสิ่งที่คุณยึดถือไว้ และหันมาใส่ใจสิ่งที่เกิดขึ้นรอบตัวโดยไม่พยายามละเลยความรู้สึกตนเองด้วยล่ะ
-            
-            “Love has absolutely no pattern, and no one will ever be perfect“
-                — Taylor swift
-            
-            
-        </Card>
-        <FooterDecorator/>
-        <ButtonSet client:load accent={accent} bg={bg} img={download} id="tonic"/>
-    </div>
+      คุณเปรียบเสมือนค็อกเทลดังกล่าว 
+      คุณเป็นมนุษย์ผู้รักความสมบูรณ์แบบ มักจะรู้สึกหงุดหงิดเมื่อผู้คนรอบข้างปฏิบัติตัวไม่ตรงตามสิ่งที่คุณคาดหวังให้พวกเขาทำ 
+      คุณเป็นคนที่หนักแน่นและซื่อสัตย์กับความรู้สึกของตนเอง 
+      ยอมหักไม่ยอมงอ นอกจากนี้คุณยังใช้ชีวิตอย่างมีแบบแผน
+      และตั้งอยู่บนหลักความเป็นจริง 
+      
+      แต่ในบางครั้งคุณยึดติดกับแบบแผนของตนเองมากเกินไปจนละเลยความรู้สึกของคนรอบตัว 
+      อย่าลืมที่จะปลอยวางสิ่งที่คุณยึดถือไว้ และหันมาใส่ใจสิ่งที่เกิดขึ้นรอบตัวโดยไม่พยายามละเลยความรู้สึกตนเองด้วยล่ะ
+      
+      “Love has absolutely no pattern, and no one will ever be perfect“
+       — Taylor swift
+    </Card>
+    <FooterDecorator />
+    <ButtonSet client:load accent={accent} bg={bg} img={download} id="tonic" />
+  </div>
 </BaseLayout>
-  
