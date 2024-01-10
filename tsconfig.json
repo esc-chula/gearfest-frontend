@@ -7,5 +7,6 @@
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
-  }
+  },
+  // "include": ["./src/middleware/index.ts", "node_modules/@types"],
 }

@@ -1,12 +1,5 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { supabase } from "../lib/supabase";
-
-// const signInWithGoogle = async () => {
-//   const { data, error } = await supabase.auth.signInWithOAuth({
-//    provider: 'google'
-//   });
-// };
 
 const { cookies, redirect } = Astro;
 
@@ -16,6 +9,8 @@ const refreshToken = cookies.get("sb-refresh-token");
 if (accessToken && refreshToken) {
   return redirect("/dashboard");
 }
+
+export const prerender = true;
 ---
 
 <!-- TODO: Implement the logic for the Google OAuth -->

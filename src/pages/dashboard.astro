@@ -28,6 +28,16 @@ if (error) {
 }
 
 const email = data?.user?.email;
+
+export const prerender = true;
+
+export async function GET() {
+  return new Response(
+    JSON.stringify({
+      message: `This is my static endpoint`,
+    }),
+  );
+}
 ---
 <BaseLayout pageTitle="dashboard">
   <h1>Welcome {email}</h1>
