@@ -29,10 +29,10 @@ const Card = ({ name, img, accent, bg, children }: Props) => {
   }
   
   return (
-    <div className={twMerge(`block w-[22rem] mt-1 justify-center items-center rounded-2xl border-1
+    <div className={twMerge(`block h-[36rem] w-[22rem] mt-1 justify-center items-center rounded-2xl border-1
     border-[#FFEEE8] text-center shadow-md text-pretty px-2 py-2`, background[bg]
     )}>
-      <div className="mx-auto rounded-2xl border px-3 border-amber-50">
+      <div className="h-[35rem] mx-auto rounded-2xl border px-3 border-amber-50">
         <img src={img} className="w-[7rem] mx-auto"></img>
         <h1 className={twMerge(`font-bold text-2xl pb-2`,acc[accent]
          )}>
