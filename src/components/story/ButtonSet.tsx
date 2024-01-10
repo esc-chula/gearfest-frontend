@@ -35,7 +35,7 @@ const ButtonSet = ({ accent, bg, img, id }: Props) => {
   const downloadImage = () => {
     document.getElementById("buttonSet").style.visibility = "hidden";
     htmlToImage
-      .toJpeg(document.getElementById(id), { quality: 1 })
+      .toJpeg(document.getElementById(id), { quality: 0.96 })
       .then(function (dataUrl) {
         const link = document.createElement("a");
         link.download = "result.jpeg";
@@ -52,7 +52,7 @@ const ButtonSet = ({ accent, bg, img, id }: Props) => {
   return (
     <div
       id="buttonSet"
-      className="relative mx-auto my-auto mt-2 flex w-[16rem] gap-4"
+      className="relative mx-auto my-auto mt-2 flex w-64 gap-4"
     >
       <button
         className={twMerge(
