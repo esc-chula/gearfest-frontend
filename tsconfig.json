@@ -6,7 +6,9 @@
       "@/*": ["src/*"]
     },
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "types": ["@types/supabase-js"],
+    "module": "commonjs",
   },
   // "include": ["./src/middleware/index.ts", "node_modules/@types"],
 }
