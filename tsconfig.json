@@ -7,8 +7,7 @@
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "types": ["@types/supabase-js"],
-    "module": "commonjs",
+    // "module": "commonjs",
   },
   // "include": ["./src/middleware/index.ts", "node_modules/@types"],
 }
