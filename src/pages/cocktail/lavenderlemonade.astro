@@ -16,7 +16,13 @@ const download = `/images/elements/download-${accent}.svg`;
     class="flex w-full flex-col items-center justify-center gap-4 bg-lalemon bg-cover bg-repeat pb-32"
   >
     <img src="/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
-    <Card client:load name="Lavender Lemonade" img={img} bg={bg} accent={accent}>
+    <Card
+      client:load
+      name="Lavender Lemonade"
+      img={img}
+      bg={bg}
+      accent={accent}
+    >
       ลาเวนเดอร์ เลมอนเนด จิน ค็อกเทลสีม่วงน่าค้นหา
       พร้อมส่วนผสมที่ประกอบไปด้วยจิน, น้ำเลม่อน, น้ำเชื่อมลาเวนเดอร์ และน้ำโซดา สร้างความซับซ้อนในรสชาติ มีรสฝาดจากน้ำมะนาว
       และกลิ่นหอมหวานจากดอกลาเวนเดอร์ เป็นเครื่องดื่มที่มีความลึกซึ้งในรสชาติ
@@ -32,6 +38,12 @@ const download = `/images/elements/download-${accent}.svg`;
       — Taylor swift
     </Card>
     <FooterDecorator />
-    <ButtonSet client:load accent={accent} bg={bg} img={download} id="lavender" />
+    <ButtonSet
+      client:load
+      accent={accent}
+      bg={bg}
+      img={download}
+      id="lavender"
+    />
   </div>
 </BaseLayout>
