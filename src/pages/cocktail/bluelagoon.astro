@@ -4,10 +4,10 @@ import Card from "@/components/story/Card.tsx";
 import ButtonSet from "@/components/story/ButtonSet.tsx";
 import FooterDecorator from "@/components/story/FooterDecorator.tsx";
 
-const img = "/images/cocktail/Blue lagoon.PNG";
+const img = "/src/images/cocktail/Blue lagoon.PNG";
 const bg = "lagoonbox";
 const accent = "tropical";
-const download = `/images/elements/download-${accent}.svg`;
+const download = `/src/images/elements/download-${accent}.svg`;
 ---
 
 <BaseLayout>
@@ -16,7 +16,7 @@ const download = `/images/elements/download-${accent}.svg`;
     id="bluelagoon"
     class="flex w-full flex-col items-center justify-center gap-4 bg-lagoon bg-cover bg-repeat pb-32"
   >
-    <img src="/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
+    <img src="/src/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
     <Card client:load name="Blue Lagoon" img={img} bg={bg} accent={accent}>
       บลู ลากูน – เครื่องดื่มสีสดใสที่เกิดจากการผสมกันระหว่าง
       วอดก้า บลูคูราโซ่ และน้ำมะนาว เนื่องด้วยรสชาติที่ให้ความสดชื่น และสีสันที่สวยงามจึงเป็นเครื่องดื่มที่มักเป็นที่นิยมในงานสังสรรค์

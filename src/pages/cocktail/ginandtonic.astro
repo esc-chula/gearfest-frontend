@@ -4,10 +4,10 @@ import Card from "@/components/story/Card.tsx";
 import ButtonSet from "@/components/story/ButtonSet.tsx";
 import FooterDecorator from "@/components/story/FooterDecorator.tsx";
 
-const img = "/images/cocktail/Gin and tonic.PNG";
+const img = "/src/images/cocktail/Gin and tonic.PNG";
 const bg = "ginbox";
 const accent = "leaf";
-const download = `/images/elements/download-${accent}.svg`;
+const download = `/src/images/elements/download-${accent}.svg`;
 ---
 
 <BaseLayout>
@@ -16,7 +16,7 @@ const download = `/images/elements/download-${accent}.svg`;
     id="tonic"
     class="flex w-full flex-col items-center justify-center gap-4 bg-gin bg-cover bg-repeat pb-32"
   >
-    <img src="/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
+    <img src="/src/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
     <Card client:load name="Gin and Tonic" img={img} bg={bg} accent={accent}>
       ด้วยรสซิตรัสจาก “จิน” สุรากลั่นจากเมล็ดข้าวซึ่งมีกลิ่นหอมสดชื่นอันเป็นเอกลักษณ์จากผลจูนิเปอร์ ผสมผสานกับ “โทนิค” เครื่องดื่มอัดแก๊สรสขมเพิ่มความซาบซ่า ทำให้ค็อกเทลรสชาติจัดจ้านนี้กลายมาเป็นค็อกเทลยอดนิยมทั่วโลก
 

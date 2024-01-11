@@ -4,10 +4,10 @@ import Card from "@/components/story/Card.tsx";
 import ButtonSet from "@/components/story/ButtonSet.tsx";
 import FooterDecorator from "@/components/story/FooterDecorator.tsx";
 
-const img = "/images/cocktail/Pina colada.PNG";
+const img = "/src/images/cocktail/Pina colada.PNG";
 const bg = "pinabox";
 const accent = "pineapple";
-const download = `/images/elements/download-${accent}.svg`;
+const download = `/src/images/elements/download-${accent}.svg`;
 ---
 
 <BaseLayout>
@@ -16,7 +16,7 @@ const download = `/images/elements/download-${accent}.svg`;
     id="pina"
     class="flex w-full flex-col items-center justify-center gap-4 bg-pina bg-cover bg-repeat pb-32"
   >
-    <img src="/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
+    <img src="/src/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
     <Card client:load name="Pina Colada" img={img} bg={bg} accent={accent}>
       น้ำสับปะรด, รัม, และครีมมะพร้าว
       ทั้งสามสิ่งนี้คือส่วนผสมหลักที่ประกอบออกมาเป็นพีน่า โคลาดา เครื่องดื่มที่ให้ความรู้สึกถึงฤดูร้อนที่แดดจ้า 
