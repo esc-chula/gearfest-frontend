@@ -47,7 +47,7 @@ const Card = ({ name, img, accent, bg, children }: Props) => {
         <h1 className={twMerge(`pb-2 text-2xl font-bold`, acc[accent])}>
           {name}
         </h1>
-        <div className="whitespace-pre-line text-pretty pb-4 text-xs font-medium text-mutedbrown">
+        <div className="text-pretty pb-4 text-xs font-medium text-mutedbrown">
           {children}
         </div>
       </div>
