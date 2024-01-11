@@ -1,22 +1,22 @@
 import type { ReactNode } from "react";
 
 interface Props {
-    header: string;
-    children: ReactNode;
-  }
-  
-  const ChoiceCard = ({ header, children }: Props) => {
-  
-    return (
-      <div
-        className="flex flex-wrap h-fit w-80 gap-2 mt-1 justify-center items-center rounded-2xl border-1
-        border-mutedpurple border bg-white text-center shadow-md px-8 py-8 font-sans"
-      >
-        <p className="font-bold text-lg text-mutedpurple mb-4 whitespace-pre-line">{header}</p>
-        {children}
-      </div>
-    );
-  };
-  
-  export default ChoiceCard;
-  
+  header: string;
+  children: ReactNode;
+}
+
+const ChoiceCard = ({ header, children }: Props) => {
+  return (
+    <div
+      className="border-1 mt-1 flex h-fit w-80 flex-wrap items-center justify-center gap-2 rounded-2xl
+        border border-mutedpurple bg-white px-8 py-8 text-center font-sans shadow-md"
+    >
+      <p className="mb-4 whitespace-pre-line text-lg font-bold text-mutedpurple">
+        {header}
+      </p>
+      {children}
+    </div>
+  );
+};
+
+export default ChoiceCard;
