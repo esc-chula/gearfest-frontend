@@ -18,7 +18,9 @@
         "parser": "@typescript-eslint/parser",
         "extraFileExtensions": [".astro"]
       },
-      "rules": {}
+      "rules": {
+        "no-unused-vars": "warn"
+      }
     }
   ],
   "plugins": ["@typescript-eslint"]

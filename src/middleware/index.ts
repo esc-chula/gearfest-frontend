@@ -46,7 +46,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
     return next();
   }
 
-  const token = context.cookies.get(TOKEN).value;
+  const token = context.cookies.get(TOKEN)?.value;
   const validationResult = await verifyAuth(token);
 
   console.log(validationResult);
