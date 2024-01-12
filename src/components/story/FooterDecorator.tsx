@@ -1,6 +1,6 @@
 const FooterDecorator = () => {
   return (
-    <div className="absolute inset-x-0 -left-[1.25rem] bottom-[8rem] opacity-80">
+    <div className="absolute inset-x-0 -left-[1.25rem] bottom-32 opacity-80">
       <img
         className="absolute left-0 top-[48px] h-32 w-[152px]"
         src="/src/images/elements/calendar.png"

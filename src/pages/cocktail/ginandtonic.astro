@@ -14,7 +14,7 @@ const download = `/src/images/elements/download-${accent}.svg`;
   <!-- TODO: Customize other cocktail types -->
   <div
     id="tonic"
-    class="flex w-full flex-col items-center justify-center gap-4 bg-gin bg-cover bg-repeat pb-32"
+    class="relative overflow-hidden flex w-full flex-col items-center justify-center gap-4 bg-gin bg-cover bg-repeat pb-8"
   >
     <img src="/src/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
     <Card client:load name="Gin and Tonic" img={img} bg={bg} accent={accent}>

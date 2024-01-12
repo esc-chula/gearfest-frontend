@@ -38,7 +38,7 @@ const Card = ({ name, img, accent, bg, children }: Props) => {
     <div
       className={twMerge(
         `border-1 mt-1 block h-[36rem] w-[22rem] items-center justify-center text-pretty
-    rounded-2xl border-[#FFEEE8] px-2 py-2 text-center shadow-md`,
+    rounded-2xl border-[#FFEEE8] px-2 py-2 text-center shadow-md z-10`,
         background[bg]
       )}
     >
