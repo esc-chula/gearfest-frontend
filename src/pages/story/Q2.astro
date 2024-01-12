@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/story/Button";
+import ChoiceCard from "../../components/story/ChoiceCard";
+---
+
+<BaseLayout>
+  <section class="flex w-full flex-col items-center justify-center gap-8">
+    <ChoiceCard header="สิ่งแรกที่คุณให้ความสนใจคือ">
+      <Button client:load text="การตกแต่งร้าน" redirect="./Q3A" />
+      <Button client:load text="คนในร้าน" redirect="./Q3C" />
+      <Button client:load text="เสียงดนตรีประกอบ" redirect="./Q3B" />
+    </ChoiceCard>
+  </section>
+</BaseLayout>

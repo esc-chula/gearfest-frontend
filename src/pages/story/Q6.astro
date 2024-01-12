@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ButtonScore from "../../components/story/ฺButtonScore";
+import ChoiceCard from "../../components/story/ChoiceCard";
+const redirect = "./Scene5";
+---
+
+<BaseLayout>
+  <section class="flex w-full flex-col items-center justify-center gap-8">
+    <ChoiceCard
+      header="บาร์เทนเดอร์ถามคุณต่อ\nถ้าคุณได้เครื่องดื่มที่ทำให้มี\nพลังวิเศษได้ คุณอยากมีพลังอะไร"
+    >
+      <ButtonScore
+        client:load
+        text="อ่านใจ"
+        scoreArray={[2, 0, 1, 0, 1, 2]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="ย้อนเวลา"
+        scoreArray={[2, 0, 0, 2, 1, 1]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="ล่องหน"
+        scoreArray={[0, 2, 0, 2, 2, 1]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="เห็นอนาคต"
+        scoreArray={[2, 0, 0, 1, 1, 1]}
+        redirect={redirect}
+      />
+    </ChoiceCard>
+  </section>
+</BaseLayout>

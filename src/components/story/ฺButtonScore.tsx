@@ -14,7 +14,7 @@ const ButtonScore = ({ text, scoreArray, redirect }: Props) => {
 
   return (
     <button
-      className="flex h-fit w-full flex-wrap items-center justify-center rounded-xl bg-mutedpurple px-4 py-3.5 text-center text-xs font-normal text-white"
+      className="flex h-fit w-full flex-wrap items-center justify-center whitespace-pre-line rounded-xl bg-mutedpurple px-4 py-3.5 text-center text-xs font-normal text-white"
       onClick={handleClick}
     >
       {text}

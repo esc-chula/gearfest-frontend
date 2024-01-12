@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ButtonScore from "../../components/story/ฺButtonScore";
+import ChoiceCard from "../../components/story/ChoiceCard";
+const redirect = "./Scene4";
+---
+
+<BaseLayout>
+  <section class="flex w-full flex-col items-center justify-center gap-8">
+    <ChoiceCard
+      header="บาร์เทนเดอร์เริ่มชวนคุณคุยระหว่างชงเครื่องดื่ม เขาถามคุณว่า\nถ้ามีเวลาหนึ่งวันที่จะทำอะไรก็ได\nคุณจะเลือกทำอะไร"
+    >
+      <ButtonScore
+        client:load
+        text="ดูหนังคนเดียวชิว ๆ"
+        scoreArray={[0, 2, 0, 1, 2, 0]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="กินข้าวกับครอบครัว"
+        scoreArray={[1, 1, 2, 2, 0, 1]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="ใช้เวลากับคนรัก"
+        scoreArray={[2, 1, 0, 2, 0, 1]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="พาสัตว์เลี้ยงไปเที่ยว"
+        scoreArray={[1, 2, 1, 1, 1, 1]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="ปาร์ตี้กับเพื่อนฝูง"
+        scoreArray={[0, 2, 2, 0, 1, 1]}
+        redirect={redirect}
+      />
+    </ChoiceCard>
+  </section>
+</BaseLayout>

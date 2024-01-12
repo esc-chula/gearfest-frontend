@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ButtonScore from "../../components/story/ฺButtonScore";
+import ChoiceCard from "../../components/story/ChoiceCard";
+const redirect = "./Scene7";
+---
+
+<BaseLayout>
+  <section class="flex w-full flex-col items-center justify-center gap-8">
+    <ChoiceCard header="คุณยังเลือกที่จะดื่มมันไหม">
+      <ButtonScore
+        client:load
+        text="ไม่ดื่มดีกว่า"
+        scoreArray={[2, 0, 0, 0, 0, 0]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="ชิมสักหน่อย"
+        scoreArray={[0, 2, 1, 1, 1, 2]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="ดื่มเลย แปลกใหม่"
+        scoreArray={[0, 2, 2, 0, 2, 2]}
+        redirect={redirect}
+      />
+    </ChoiceCard>
+  </section>
+</BaseLayout>

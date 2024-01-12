@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ButtonScore from "../../components/story/ฺButtonScore";
+import ChoiceCard from "../../components/story/ChoiceCard";
+const redirect = "./Q2";
+---
+
+<BaseLayout>
+  <section class="flex w-full flex-col items-center justify-center gap-8">
+    <ChoiceCard header="คุณเข้ามาที่บาร์แห่งหนึ่ง\nบาร์แห่งนี้เป็น">
+      <ButtonScore
+        client:load
+        text="บาร์ชื่อดัง รีวิวแน่น"
+        scoreArray={[2, 0, 2, 0, 0, 1]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="บาร์ลับ สงบ ไม่ค่อยมีคน"
+        scoreArray={[0, 0, 0, 2, 2, 0]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="บาร์ที่คุณเคยมากับคนรู้จัก"
+        scoreArray={[1, 0, 2, 1, 0, 1]}
+        redirect={redirect}
+      />
+    </ChoiceCard>
+  </section>
+</BaseLayout>

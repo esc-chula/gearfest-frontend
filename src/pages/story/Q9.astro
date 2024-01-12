@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ButtonScore from "../../components/story/ฺButtonScore";
+import ChoiceCard from "../../components/story/ChoiceCard";
+const redirect = "./Scene10";
+---
+
+<BaseLayout>
+  <section class="flex w-full flex-col items-center justify-center gap-8">
+    <ChoiceCard header="ถ้าคุณเลือกชีวิตในอุดมคติได้\nคุณอยากใช้ชีวิตยังไง">
+      <ButtonScore
+        client:load
+        text="ชีวิตที่สงบเรียบง่าย"
+        scoreArray={[2, 2, 1, 0, 1, 0]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="ชีวิตโลดโผน มีอิสระ"
+        scoreArray={[0, 1, 1, 2, 1, 2]}
+        redirect={redirect}
+      />
+      <ButtonScore
+        client:load
+        text="ชีวิตในโลกอื่น"
+        scoreArray={[0, 1, 0, 2, 2, 0]}
+        redirect={redirect}
+      />
+    </ChoiceCard>
+  </section>
+</BaseLayout>
