@@ -1,8 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SignInBackground from "@/layouts/SignInBackground.astro";
-import { Image } from "astro:assets";
-import BarImage from "#/images/bar.png";
+import Hero from "@/components/register-page/Hero.tsx";
 ---
 
 <!-- TODO: Implement the logic for the Google OAuth -->
@@ -24,21 +24,7 @@ import BarImage from "#/images/bar.png";
           height="92"
         />
       </div>
-      <div class="w-full space-y-12">
-        <div
-          class="flex h-72 w-full items-end overflow-hidden rounded-lg bg-white"
-        >
-          <Image src={BarImage} alt="Bar Image" />
-        </div>
-        <div>
-          <button
-            class="flex h-fit w-full flex-wrap items-center justify-center gap-6 rounded-lg bg-base px-4 py-2.5 text-center text-2xl font-semibold text-primary shadow-button"
-          >
-            <i class="icon-[devicon--google] h-7 w-7"></i>
-             Register with Google
-          </button>
-        </div>
-      </div>
+      <Hero />
     </div>
   </SignInBackground>
 </BaseLayout>
