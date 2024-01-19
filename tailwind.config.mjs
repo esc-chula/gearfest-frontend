@@ -11,7 +11,7 @@ export default {
       },
       backgroundImage: {
         signin:
-          "url(/public/images/grain-bg.png), linear-gradient(170deg, #A283AB -10.14%, #0D3C56 69.45%);",
+          "url(/src/assets/images/grain-bg.png), linear-gradient(170deg, #A283AB -10.14%, #0D3C56 69.45%);",
       },
       boxShadow: {
         button:
