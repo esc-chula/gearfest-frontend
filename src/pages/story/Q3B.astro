@@ -1,31 +1,31 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import ButtonScore from "../../components/story/ฺButtonScore";
-import ChoiceCard from "../../components/story/ChoiceCard";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ScoredButton from "@/components/story/ScoredButton";
+import ChoiceCard from "@/components/story/ChoiceCard";
 const redirect = "./Scene3";
 ---
 
 <BaseLayout>
-  <section class="flex w-full flex-col items-center justify-center gap-8">
+  <form
+    class="flex w-full flex-col items-center justify-center gap-8"
+    action={redirect}
+  >
     <ChoiceCard header="เพลงที่เปิดอยู่ในบาร์เป็นยังไง">
-      <ButtonScore
+      <ScoredButton
         client:load
         text="เพลงเบา ๆ คลอ ๆ"
-        scoreArray={[1, 1, 0, 1, 0, 0]}
-        redirect={redirect}
+        scores={[1, 1, 0, 1, 0, 0]}
       />
-      <ButtonScore
+      <ScoredButton
         client:load
         text="เพลงเศร้า อกหัก เคล้าน้ำตา"
-        scoreArray={[0, 1, 0, 2, 1, 0]}
-        redirect={redirect}
+        scores={[0, 1, 0, 2, 1, 0]}
       />
-      <ButtonScore
+      <ScoredButton
         client:load
         text="เพลงสนุก แด๊นซ์กระจาย"
-        scoreArray={[0, 1, 2, 0, 2, 0]}
-        redirect={redirect}
+        scores={[0, 1, 2, 0, 2, 0]}
       />
     </ChoiceCard>
-  </section>
+  </form>
 </BaseLayout>
