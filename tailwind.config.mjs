@@ -21,7 +21,8 @@ export default {
         pinabox: "linear-gradient(166deg, #FFFDF9 -16.07%, #ECD3BB 81.36%)",
         gin: 'url("/src/assets/images/grain-bg.png"), linear-gradient(170deg, #B2C196 -10.14%, #0D5649 98.39%)',
         ginbox: "linear-gradient(166deg, #FFFFFF -16.07%, #C7DBB7 81.36%)",
-        lagoon: `url("/src/assets/images/grain-bg.png"), linear-gradient(170deg, #84C9EF -10.14%, #0D3C56 98.39%)`,
+        lagoon:
+          'url("/src/assets/images/grain-bg.png"), linear-gradient(170deg, #84C9EF -10.14%, #0D3C56 98.39%)',
         lagoonbox: "linear-gradient(166deg, #FAFEFF -16.07%, #B1DCFC 81.36%)",
         lalemon:
           'url("/src/assets/images/grain-bg.png"), linear-gradient(170deg, #D09DDE -10.14%, #30255A 98.39%)',
