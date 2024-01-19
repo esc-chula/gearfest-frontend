@@ -1,58 +1,36 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Card from "@/components/story/Card.tsx";
-import ButtonSet from "@/components/story/ButtonSet.tsx";
-import FooterDecorator from "@/components/story/FooterDecorator.tsx";
-
-const img = "/src/images/cocktail/Lavender lemonade.PNG";
-const bg = "lalemonbox";
-const accent = "lavender";
-const download = `/src/images/elements/download-${accent}.svg`;
+import CocktailCard from "@/layouts/CocktailCard.astro";
+import Lavender from "@/assets/elements/lavender-lemonade.png";
+import DownloadLavender from "@/assets/elements/download-lavender.svg";
 ---
 
-<BaseLayout>
-  <!-- TODO: Customize other cocktail types -->
-  <div
-    id="lavender"
-    class="relative flex w-full flex-col items-center justify-center gap-4 overflow-hidden bg-lalemon bg-cover bg-repeat pb-8"
-  >
-    <img src="/src/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
-    <Card
-      client:load
-      name="Lavender Lemonade"
-      img={img}
-      bg={bg}
-      accent={accent}
-    >
-      ลาเวนเดอร์ เลมอนเนด จิน ค็อกเทลสีม่วงน่าค้นหา
-      <br />พร้อมส่วนผสมที่ประกอบไปด้วยจิน, น้ำเลม่อน, น้ำเชื่อมลาเวนเดอร์
-      และน้ำโซดา สร้างความซับซ้อนในรสชาติ มีรสฝาดจากน้ำมะนาว
-      <br />และกลิ่นหอมหวานจากดอกลาเวนเดอร์
-      เป็นเครื่องดื่มที่มีความลึกซึ้งในรสชาติ
-      <br /><br />
-       คุณเปรียบเสมือนค็อกเทลดังกล่าว
-      คุณเป็นคนที่อ่อนโยนและลึกซึ้งในเรื่องของความสัมพันธ์
-      คุณเป็นคนละเอียดในทุกการกระทำ
-      <br />และมักจะมีความเห็นอกเห็นใจผู้อื่นอยู่เสมอ
-      ทำให้ใครหลายคนมักนิยามคุณว่าคุณคือผู้ฟังที่ดี
-      <br /><br />
-       คุณมีมุมที่เป็นคนอ่อนไหวได้ง่าย
-      <br />ในบางครั้งคุณอาจจะนึกถึงการกระทำ หรือคำพูดที่เกิดขึ้นในอดีต
-      <br />ที่ทำให้คุณรู้สึกไม่ดีอยากจะกลับไปแก้ไข
-      แต่อย่าลืมที่จะพยายามปล่อยวางเรื่องทุกข์ใจเหล่านี้โดยหันมาโอบกอดตัวเองให้แน่นในการให้อภัย
-      ละทิ้งซึ่งอดีต และเดินหน้าไปต่ออย่างภาคภูมินะ
-      <br /><br />
-       “Love has absolutely no pattern,
-      <br />and no one will ever be perfect“
-      <br />—Taylor swift
-    </Card>
-    <FooterDecorator />
-    <ButtonSet
-      client:load
-      accent={accent}
-      bg={bg}
-      img={download}
-      id="lavender"
-    />
-  </div>
-</BaseLayout>
+<CocktailCard
+  id="lalemon"
+  name="Lavender Lemonade"
+  img={Lavender.src}
+  bg="lalemon"
+  bgbox="lalemonbox"
+  accent="lavender"
+  download={DownloadLavender.src}
+>
+  ลาเวนเดอร์ เลมอนเนด จิน ค็อกเทลสีม่วงน่าค้นหา
+  <br />พร้อมส่วนผสมที่ประกอบไปด้วยจิน, น้ำเลม่อน, น้ำเชื่อมลาเวนเดอร์
+  และน้ำโซดา สร้างความซับซ้อนในรสชาติ มีรสฝาดจากน้ำมะนาว
+  <br />และกลิ่นหอมหวานจากดอกลาเวนเดอร์ เป็นเครื่องดื่มที่มีความลึกซึ้งในรสชาติ
+  <br /><br />
+   คุณเปรียบเสมือนค็อกเทลดังกล่าว
+  คุณเป็นคนที่อ่อนโยนและลึกซึ้งในเรื่องของความสัมพันธ์
+  คุณเป็นคนละเอียดในทุกการกระทำ
+  <br />และมักจะมีความเห็นอกเห็นใจผู้อื่นอยู่เสมอ
+  ทำให้ใครหลายคนมักนิยามคุณว่าคุณคือผู้ฟังที่ดี
+  <br /><br />
+   คุณมีมุมที่เป็นคนอ่อนไหวได้ง่าย
+  <br />ในบางครั้งคุณอาจจะนึกถึงการกระทำ หรือคำพูดที่เกิดขึ้นในอดีต
+  <br />ที่ทำให้คุณรู้สึกไม่ดีอยากจะกลับไปแก้ไข
+  แต่อย่าลืมที่จะพยายามปล่อยวางเรื่องทุกข์ใจเหล่านี้โดยหันมาโอบกอดตัวเองให้แน่นในการให้อภัย
+  ละทิ้งซึ่งอดีต และเดินหน้าไปต่ออย่างภาคภูมินะ
+  <br /><br />
+   “Love has absolutely no pattern,
+  <br />and no one will ever be perfect“
+  <br />—Taylor swift
+</CocktailCard>

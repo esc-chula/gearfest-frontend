@@ -1,50 +1,35 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Card from "@/components/story/Card.tsx";
-import ButtonSet from "@/components/story/ButtonSet.tsx";
-import FooterDecorator from "@/components/story/FooterDecorator.tsx";
-
-const img = "/src/images/cocktail/Blue lagoon.PNG";
-const bg = "lagoonbox";
-const accent = "tropical";
-const download = `/src/images/elements/download-${accent}.svg`;
+import CocktailCard from "@/layouts/CocktailCard.astro";
+import BlueLagoon from "@/assets/elements/blue-lagoon.png";
+import DownloadBlue from "@/assets/elements/download-blue.svg";
 ---
 
-<BaseLayout>
-  <!-- TODO: Customize other cocktail types -->
-  <div
-    id="bluelagoon"
-    class="relative flex w-full flex-col items-center justify-center gap-4 overflow-hidden bg-lagoon bg-cover bg-repeat pb-8"
-  >
-    <img src="/src/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
-    <Card client:load name="Blue Lagoon" img={img} bg={bg} accent={accent}>
-      บลู ลากูน – เครื่องดื่มสีสดใสที่เกิดจากการผสมกันระหว่าง
-      <br />วอดก้า บลูคูราโซ่ และน้ำมะนาว เนื่องด้วยรสชาติที่ให้ความสดชื่น
-      และสีสันที่สวยงามจึงเป็นเครื่องดื่มที่มักเป็นที่นิยมในงานสังสรรค์
-      <br /><br />
-       คุณเปรียบเสมือนค็อกเทลดังกล่าว คุณเป็นมนุษย์ที่ชอบเข้าสังคม สดใส ร่าเริง
-      ชอบพูดคุยและทำความรู้จักกับผู้คนใหม่ ๆ
-      เปรียบเหมือนผีเสื้อที่บินไปหาดอกไม้มากมาย
-      <br /><br />
-       คุณเป็นคนที่มีความเป็นเด็กน้อยในตัวสูง
-      ตื่นเต้นกับสิ่งที่แปลกใหม่รอบตัวจนในบางทีคุณอาจจะมีแนวโน้มที่จะเป็นคนเบื่อง่าย
+<CocktailCard
+  id="lagoon"
+  name="Blue Lagoon"
+  img={BlueLagoon.src}
+  bg="lagoon"
+  bgbox="lagoonbox"
+  accent="tropical"
+  download={DownloadBlue.src}
+>
+  บลู ลากูน – เครื่องดื่มสีสดใสที่เกิดจากการผสมกันระหว่าง
+  <br />วอดก้า บลูคูราโซ่ และน้ำมะนาว เนื่องด้วยรสชาติที่ให้ความสดชื่น
+  และสีสันที่สวยงามจึงเป็นเครื่องดื่มที่มักเป็นที่นิยมในงานสังสรรค์
+  <br /><br />
+   คุณเปรียบเสมือนค็อกเทลดังกล่าว คุณเป็นมนุษย์ที่ชอบเข้าสังคม สดใส ร่าเริง
+  ชอบพูดคุยและทำความรู้จักกับผู้คนใหม่ ๆ
+  เปรียบเหมือนผีเสื้อที่บินไปหาดอกไม้มากมาย
+  <br /><br />
+   คุณเป็นคนที่มีความเป็นเด็กน้อยในตัวสูง
+  ตื่นเต้นกับสิ่งที่แปลกใหม่รอบตัวจนในบางทีคุณอาจจะมีแนวโน้มที่จะเป็นคนเบื่อง่าย
 
 
-      <br /><br />
-       ถึงแม้ภายนอกคุณจะดูสดใส แต่จริง ๆ
-      คุณก็มีมุมที่มีความลึกลับที่คนนอกอาจจะเข้าไม่ถึง
-      <br /><br />
-       “Love has absolutely no pattern,
-      <br />and no one will ever be perfect“
-      <br />—Taylor swift
-    </Card>
-    <FooterDecorator />
-    <ButtonSet
-      client:load
-      accent={accent}
-      bg={bg}
-      img={download}
-      id="bluelagoon"
-    />
-  </div>
-</BaseLayout>
+  <br /><br />
+   ถึงแม้ภายนอกคุณจะดูสดใส แต่จริง ๆ
+  คุณก็มีมุมที่มีความลึกลับที่คนนอกอาจจะเข้าไม่ถึง
+  <br /><br />
+   “Love has absolutely no pattern,
+  <br />and no one will ever be perfect“
+  <br />—Taylor swift
+</CocktailCard>

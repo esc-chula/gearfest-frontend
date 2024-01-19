@@ -1,0 +1,21 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Card from "@/components/story/Card.tsx";
+import ButtonSet from "@/components/story/ButtonSet.tsx";
+import FooterDecorator from "@/components/story/FooterDecorator.tsx";
+import Logo from "@/assets/elements/logo.png";
+
+const { id, name, img, bgbox, bg, accent, download } = Astro.props;
+const classname = `bg-${bg} relative flex w-full flex-col items-center justify-center gap-4 overflow-hidden bg-cover bg-repeat pb-8`;
+---
+
+<BaseLayout>
+  <div id={id} class={classname}>
+    <img src={Logo.src} class="mx-auto mt-8 w-20" />
+    <Card client:load name={name} img={img} bg={bgbox} accent={accent}>
+      <slot />
+    </Card>
+    <FooterDecorator />
+    <ButtonSet client:load accent={accent} bg={bgbox} img={download} id={id} />
+  </div>
+</BaseLayout>

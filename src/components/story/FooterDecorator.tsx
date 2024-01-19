@@ -1,12 +1,12 @@
-import Calendar from "@/assets/elements/calendar.png"
-import Palette from "@/assets/elements/palette.png"
-import Heart1 from "@/assets/elements/heart-1.png"
-import Orange from "@/assets/elements/orange.png"
-import Donut from "@/assets/elements/donut.png"
-import Drinks from "@/assets/elements/drinks.png"
-import Letter from "@/assets/elements/letter.png"
-import Strawberry from "@/assets/elements/strawberry.png"
-import Cake1 from "@/assets/elements/cake-1.png"
+import Cake1 from "@/assets/elements/cake-1.png";
+import Calendar from "@/assets/elements/calendar.png";
+import Donut from "@/assets/elements/donut.png";
+import Drinks from "@/assets/elements/drinks.png";
+import Heart1 from "@/assets/elements/heart-1.png";
+import Letter from "@/assets/elements/letter.png";
+import Orange from "@/assets/elements/orange.png";
+import Palette from "@/assets/elements/palette.png";
+import Strawberry from "@/assets/elements/strawberry.png";
 
 const FooterDecorator = () => {
   return (

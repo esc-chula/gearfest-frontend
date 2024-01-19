@@ -1,44 +1,35 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Card from "@/components/story/Card.tsx";
-import ButtonSet from "@/components/story/ButtonSet.tsx";
-import FooterDecorator from "@/components/story/FooterDecorator.tsx";
-
-const img = "/src/images/cocktail/Cosmopolitan.PNG";
-const bg = "cosmobox";
-const accent = "peach";
-const download = `/src/images/elements/download-${accent}.svg`;
+import CocktailCard from "@/layouts/CocktailCard.astro";
+import Cosmo from "@/assets/elements/cosmopolitan.png";
+import DownloadOrange from "@/assets/elements/download-orange.svg";
 ---
 
-<BaseLayout>
-  <!-- TODO: Customize other cocktail types -->
-  <div
-    id="cosmo"
-    class="relative flex w-full flex-col items-center justify-center gap-4 overflow-hidden bg-cosmo bg-cover bg-repeat pb-8"
-  >
-    <img src="/src/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
-    <Card client:load name="Cosmopolitan" img={img} bg={bg} accent={accent}>
-      วอดก้า แครนเบอรี่ และน้ำมะนาว สามส่วนผสมหลักที่เข้ากันได้อย่างไม่น่าเชื่อ
-      รวมกันเป็นค็อกเทลรสเปรี้ยวอมหวานสีชมพูสดใส
-      <br />ที่ครองใจสาว ๆ นักดื่มทั่วโลก
-      <br /><br />
-       คุณเปรียบเสมือนค็อกเทลดังกล่าว คุณเป็นคนขี้เล่น มีเสน่ห์
-      <br />และมักจะเต็มเปี่ยมไปด้วยพลังงานในการทำสิ่งต่าง ๆ
-      <br />คุณเป็นคนที่ให้ลุคสบาย ๆ แต่ในขณะเดียวกัน
-      ก็แฝงไปด้วยความมั่นใจในตนเอง มีอารมณ์ขัน
-      <br />และเป็นคนที่มักจะปล่อยวางในสถานการณ์ที่ควบคุมไม่ได้ได้ดี
-      แต่ในบางครั้งด้วยความที่คุณเป็นคนคารมคมคาย
-      <br /><br />
-       คนอื่นอาจมองว่าคุณเป็นคนเจ้าชู้ ไม่จริงจังกับความสัมพันธ์
-      จากการที่คุณสามารถเข้ากับคนง่าย
-      <br />คุณอาจจะต้องใช้ระยะเวลาและความจริงใจในการพิสูจน์
-      <br />ซึ่งหากผ่านพ้นไปได้แล้วจะได้เจอกับความรักที่คุณตามหาแน่นอน
-      <br /><br />
-       “Love has absolutely no pattern,
-      <br />and no one will ever be perfect“
-      <br />—Taylor swift
-    </Card>
-    <FooterDecorator />
-    <ButtonSet client:load accent={accent} bg={bg} img={download} id="cosmo" />
-  </div>
-</BaseLayout>
+<CocktailCard
+  id="cosmo"
+  name="Cosmopolitan"
+  img={Cosmo.src}
+  bg="cosmo"
+  bgbox="cosmobox"
+  accent="cosmo"
+  download={DownloadOrange.src}
+>
+  วอดก้า แครนเบอรี่ และน้ำมะนาว สามส่วนผสมหลักที่เข้ากันได้อย่างไม่น่าเชื่อ
+  รวมกันเป็นค็อกเทลรสเปรี้ยวอมหวานสีชมพูสดใส
+  <br />ที่ครองใจสาว ๆ นักดื่มทั่วโลก
+  <br /><br />
+   คุณเปรียบเสมือนค็อกเทลดังกล่าว คุณเป็นคนขี้เล่น มีเสน่ห์
+  <br />และมักจะเต็มเปี่ยมไปด้วยพลังงานในการทำสิ่งต่าง ๆ
+  <br />คุณเป็นคนที่ให้ลุคสบาย ๆ แต่ในขณะเดียวกัน ก็แฝงไปด้วยความมั่นใจในตนเอง
+  มีอารมณ์ขัน
+  <br />และเป็นคนที่มักจะปล่อยวางในสถานการณ์ที่ควบคุมไม่ได้ได้ดี
+  แต่ในบางครั้งด้วยความที่คุณเป็นคนคารมคมคาย
+  <br /><br />
+   คนอื่นอาจมองว่าคุณเป็นคนเจ้าชู้ ไม่จริงจังกับความสัมพันธ์
+  จากการที่คุณสามารถเข้ากับคนง่าย
+  <br />คุณอาจจะต้องใช้ระยะเวลาและความจริงใจในการพิสูจน์
+  <br />ซึ่งหากผ่านพ้นไปได้แล้วจะได้เจอกับความรักที่คุณตามหาแน่นอน
+  <br /><br />
+   “Love has absolutely no pattern,
+  <br />and no one will ever be perfect“
+  <br />—Taylor swift
+</CocktailCard>

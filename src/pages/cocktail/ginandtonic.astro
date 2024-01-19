@@ -1,50 +1,34 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Card from "@/components/story/Card.tsx";
-import ButtonSet from "@/components/story/ButtonSet.tsx";
-import FooterDecorator from "@/components/story/FooterDecorator.tsx";
-
-const img = "/src/images/cocktail/Gin and tonic.PNG";
-const bg = "ginbox";
-const accent = "leaf";
-const download = `/src/images/elements/download-${accent}.svg`;
+import CocktailCard from "@/layouts/CocktailCard.astro";
+import Gin from "@/assets/elements/gin-and-tonic.png";
+import DownloadGreen from "@/assets/elements/download-green.svg";
 ---
 
-<BaseLayout>
-  <!-- TODO: Customize other cocktail types -->
-  <div
-    id="tonic"
-    class="relative flex w-full flex-col items-center justify-center gap-4 overflow-hidden bg-gin bg-cover bg-repeat pb-8"
-  >
-    <img src="/src/images/elements/heartlogo.png" class="mx-auto mt-8 w-20" />
-    <Card client:load name="Gin and Tonic" img={img} bg={bg} accent={accent}>
-      ด้วยรสซิตรัสจาก “จิน”
-      สุรากลั่นจากเมล็ดข้าวซึ่งมีกลิ่นหอมสดชื่นอันเป็นเอกลักษณ์จากผลจูนิเปอร์
-      ผสมผสานกับ “โทนิค” เครื่องดื่มอัดแก๊สรสขมเพิ่มความซาบซ่า
-      ทำให้ค็อกเทลรสชาติจัดจ้านนี้กลายมาเป็นค็อกเทลยอดนิยมทั่วโลก
-      <br /><br />
-       คุณเปรียบเสมือนค็อกเทลดังกล่าว
-      <br />คุณเป็นมนุษย์ผู้รักความสมบูรณ์แบบ
-      มักจะรู้สึกหงุดหงิดเมื่อผู้คนรอบข้างปฏิบัติตัวไม่ตรงตามสิ่งที่คุณคาดหวังให้พวกเขาทำ
+<CocktailCard
+  id="gin"
+  name="Gin and Tonic"
+  img={Gin.src}
+  bg="gin"
+  bgbox="ginbox"
+  accent="leaf"
+  download={DownloadGreen.src}
+>
+  ด้วยรสซิตรัสจาก “จิน”
+  สุรากลั่นจากเมล็ดข้าวซึ่งมีกลิ่นหอมสดชื่นอันเป็นเอกลักษณ์จากผลจูนิเปอร์
+  ผสมผสานกับ “โทนิค” เครื่องดื่มอัดแก๊สรสขมเพิ่มความซาบซ่า
+  ทำให้ค็อกเทลรสชาติจัดจ้านนี้กลายมาเป็นค็อกเทลยอดนิยมทั่วโลก
+  <br /><br />
+   คุณเปรียบเสมือนค็อกเทลดังกล่าว
+  <br />คุณเป็นมนุษย์ผู้รักความสมบูรณ์แบบ
+  มักจะรู้สึกหงุดหงิดเมื่อผู้คนรอบข้างปฏิบัติตัวไม่ตรงตามสิ่งที่คุณคาดหวังให้พวกเขาทำ
 
 
-      <br />คุณเป็นคนที่หนักแน่นและซื่อสัตย์กับความรู้สึกของตนเอง
-      <br />ยอมหักไม่ยอมงอ นอกจากนี้คุณยังใช้ชีวิตอย่างมีแบบแผน
-      <br />และตั้งอยู่บนหลักความเป็นจริง
-      <br /><br />
-       แต่ในบางครั้งคุณยึดติดกับแบบแผนของตนเองมากเกินไปจนละเลยความรู้สึกของคนรอบตัว
+  <br />คุณเป็นคนที่หนักแน่นและซื่อสัตย์กับความรู้สึกของตนเอง
+  <br />ยอมหักไม่ยอมงอ นอกจากนี้คุณยังใช้ชีวิตอย่างมีแบบแผน
+  <br />และตั้งอยู่บนหลักความเป็นจริง
+  <br /><br />
+   แต่ในบางครั้งคุณยึดติดกับแบบแผนของตนเองมากเกินไปจนละเลยความรู้สึกของคนรอบตัว
 
-
-      <br />อย่าลืมที่จะปลอยวางสิ่งที่คุณยึดถือไว้
-      และหันมาใส่ใจสิ่งที่เกิดขึ้นรอบตัว โดยพยายามไม่ละเลยความรู้สึกตนเองด้วยล่ะ
-
-
-      <br /><br />
-       “Love has absolutely no pattern,
-      <br />and no one will ever be perfect“
-      <br />—Taylor swift
-    </Card>
-    <FooterDecorator />
-    <ButtonSet client:load accent={accent} bg={bg} img={download} id="tonic" />
-  </div>
-</BaseLayout>
+  <br />อย่าลืมที่จะปลอยวางสิ่งที่คุณยึดถือไว้
+  และหันมาใส่ใจสิ่งที่เกิดขึ้นรอบตัว โดยพยายามไม่ละเลยความรู้สึกตนเองด้วยล่ะ
+</CocktailCard>
