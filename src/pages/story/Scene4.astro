@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Tap from "../../components/story/Tap";
+---
+
+<BaseLayout>
+  นี่คือหน้าเปล่าที่แตะแล้วไปต่อได้
+  <Tap client:load redirect="./Q6" />
+</BaseLayout>

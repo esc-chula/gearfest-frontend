@@ -1,0 +1,36 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Button from "@/components/story/Button";
+import ChoiceCard from "@/components/story/ChoiceCard";
+import Background from "@/assets/images/barBackground.jpg";
+---
+
+<BaseLayout>
+  <div class="relative h-screen w-screen">
+    <section
+      class="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-8"
+    >
+      <ChoiceCard header="สิ่งแรกที่คุณให้ความสนใจคือ">
+        <a href="./Q3A" class="flex h-fit w-full flex-wrap"
+          ><Button client:load text="การตกแต่งร้าน" /></a
+        >
+        <a href="./Q3C" class="flex h-fit w-full flex-wrap"
+          ><Button client:load text="คนในร้าน" /></a
+        >
+        <a href="./Q3B" class="flex h-fit w-full flex-wrap"
+          ><Button client:load text="เสียงดนตรีประกอบ" /></a
+        >
+      </ChoiceCard>
+    </section>
+
+    <div
+      class="absolute left-1/2 top-1/2 z-40 h-screen w-screen -translate-x-1/2 -translate-y-1/2"
+    >
+      <img
+        class="relative z-0 mx-auto h-screen w-screen object-cover"
+        src={Background.src}
+        alt="bar"
+      />
+    </div>
+  </div>
+</BaseLayout>

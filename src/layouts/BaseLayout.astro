@@ -1,9 +1,9 @@
 ---
+import "@/style.css";
+import { ViewTransitions } from "astro:transitions";
 interface Props {
   pageTitle?: string;
 }
-
-import "@fontsource/mitr";
 
 const { pageTitle = "GearFestival" } = Astro.props;
 ---
@@ -15,10 +15,11 @@ const { pageTitle = "GearFestival" } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <ViewTransitions />
   </head>
   <body>
     <main
-      class="absolute left-1/2 flex min-h-screen w-full max-w-md -translate-x-1/2 outline-dashed outline-2 outline-black"
+      class="absolute left-1/2 flex min-h-screen w-full max-w-md -translate-x-1/2 font-sans outline-dashed outline-2 outline-black"
     >
       <slot />
     </main>

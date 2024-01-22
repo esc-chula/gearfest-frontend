@@ -1,0 +1,44 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ScoredButton from "@/components/story/ScoredButton";
+import ChoiceCard from "@/components/story/ChoiceCard";
+const redirect = "./Scene3";
+import Background from "@/assets/images/barBackground.jpg";
+---
+
+<BaseLayout>
+  <div class="relative h-screen w-screen">
+    <form
+      class="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-8"
+      action={redirect}
+    >
+      <ChoiceCard header="เพลงที่เปิดอยู่ในบาร์เป็นยังไง">
+        <ScoredButton
+          client:load
+          text="เพลงเบา ๆ คลอ ๆ"
+          scores={[1, 1, 0, 1, 0, 0]}
+        />
+        <ScoredButton
+          client:load
+          text="เพลงเศร้า อกหัก เคล้าน้ำตา"
+          scores={[0, 1, 0, 2, 1, 0]}
+        />
+        <ScoredButton
+          client:load
+          text="เพลงสนุก แด๊นซ์กระจาย"
+          scores={[0, 1, 2, 0, 2, 0]}
+        />
+      </ChoiceCard>
+    </form>
+
+    <div
+      class="absolute left-1/2 top-1/2 z-40 h-screen w-screen -translate-x-1/2 -translate-y-1/2"
+    >
+      <img
+        class="relative z-0 mx-auto h-screen w-screen object-cover"
+        src={Background.src}
+        alt="bar"
+      />
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,56 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ScoredButton from "@/components/story/ScoredButton";
+import ChoiceCard from "@/components/story/ChoiceCard";
+const redirect = "./Scene4";
+import Background from "@/assets/images/barBackground.jpg";
+---
+
+<BaseLayout>
+  <div class="relative h-screen w-screen">
+    <form
+      class="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-8"
+      action={redirect}
+    >
+      <ChoiceCard
+        header="บาร์เทนเดอร์เริ่มชวนคุณคุยระหว่างชงเครื่องดื่ม เขาถามคุณว่า\nถ้ามีเวลาหนึ่งวันที่จะทำอะไรก็ได้\nคุณจะเลือกทำอะไร"
+      >
+        <ScoredButton
+          client:load
+          text="ดูหนังคนเดียวชิว ๆ"
+          scores={[0, 2, 0, 1, 2, 0]}
+        />
+        <ScoredButton
+          client:load
+          text="กินข้าวกับครอบครัว"
+          scores={[1, 1, 2, 2, 0, 1]}
+        />
+        <ScoredButton
+          client:load
+          text="ใช้เวลากับคนรัก"
+          scores={[2, 1, 0, 2, 0, 1]}
+        />
+        <ScoredButton
+          client:load
+          text="พาสัตว์เลี้ยงไปเที่ยว"
+          scores={[1, 2, 1, 1, 1, 1]}
+        />
+        <ScoredButton
+          client:load
+          text="ปาร์ตี้กับเพื่อนฝูง"
+          scores={[0, 2, 2, 0, 1, 1]}
+        />
+      </ChoiceCard>
+    </form>
+
+    <div
+      class="absolute left-1/2 top-1/2 z-40 h-screen w-screen -translate-x-1/2 -translate-y-1/2"
+    >
+      <img
+        class="relative z-0 mx-auto h-screen w-screen object-cover"
+        src={Background.src}
+        alt="bar"
+      />
+    </div>
+  </div>
+</BaseLayout>

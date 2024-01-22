@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "SukhumvitSet";
+  src: url("/fonts/sukhumvit-set/SukhumvitSet-Text.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SukhumvitSet";
+  src: url("/fonts/sukhumvit-set/SukhumvitSet-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SukhumvitSet";
+  src: url("/fonts/sukhumvit-set/SukhumvitSet-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SukhumvitSet";
+  src: url("/fonts/sukhumvit-set/SukhumvitSet-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SukhumvitSet";
+  src: url("/fonts/sukhumvit-set/SukhumvitSet-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SukhumvitSet";
+  src: url("/fonts/sukhumvit-set/SukhumvitSet-Thin.ttf");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+.fade-in-text {
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

@@ -1,0 +1,23 @@
+import "@fontsource/mitr";
+import type { ReactNode } from "react";
+
+interface Props {
+  header: string;
+  children: ReactNode;
+}
+
+const ChoiceCard = ({ header, children }: Props) => {
+  return (
+    <div
+      className="border-1 border-mutedpurple mt-1 flex h-fit w-80 flex-wrap items-center justify-center gap-2
+        rounded-2xl border bg-white px-8 py-8 text-center  shadow-md"
+    >
+      <p className="text-mutedpurple mb-4 whitespace-pre-line font-['mitr'] text-lg font-bold">
+        {header}
+      </p>
+      {children}
+    </div>
+  );
+};
+
+export default ChoiceCard;

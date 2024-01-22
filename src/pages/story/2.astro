@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ChoiceCard from "../../components/story/ChoiceCard";
+import ScoredButton from "@/components/story/ScoredButton";
+const redirect = "./3";
+---
+
+<BaseLayout>
+  <form
+    class="flex w-full flex-col items-center justify-center gap-8"
+    action={redirect}
+  >
+    <ChoiceCard header="นี่คือตัวอย่างปุ่ม\nที่นับคะแนนหมดเลย">
+      <ScoredButton client:load text="Option 1" scores={[1, 0, 2, 1, 0, 1]} />
+      <ScoredButton client:load text="Option 2" scores={[2, 2, 0, 0, 2, 1]} />
+      <ScoredButton client:load text="Option 3" scores={[0, 1, 1, 2, 0, 0]} />
+    </ChoiceCard>
+  </form>
+</BaseLayout>
