@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/story/Button";
+import ChoiceCard from "../../components/story/ChoiceCard";
+const redirect = "./2";
+---
+
+<BaseLayout>
+  <form
+    class="flex w-full flex-col items-center justify-center gap-8"
+    action={redirect}
+  >
+    <ChoiceCard header="นี่คือตัวอย่างปุ่ม\nที่ไม่นับคะแนนสักอัน">
+      <Button client:load text="Option 1" />
+      <Button client:load text="Option 2" />
+      <Button client:load text="Option 3" />
+    </ChoiceCard>
+  </form>
+</BaseLayout>
