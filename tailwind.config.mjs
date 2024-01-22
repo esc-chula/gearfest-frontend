@@ -29,6 +29,7 @@ export default {
         lalemonbox: "linear-gradient(166deg, #FBF6FE -16.07%, #E2C9E8 81.36%)",
       },
       colors: {
+        mutedpurple: "#864974",
         mutedbrown: "#6D5958",
         salmon: "#EB7676",
         peach: "#DE7671",
