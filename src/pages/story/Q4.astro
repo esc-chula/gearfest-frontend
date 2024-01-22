@@ -1,0 +1,20 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Button from "@/components/story/Button";
+import ChoiceCard from "@/components/story/ChoiceCard";
+const redirect = "./Q5";
+---
+
+<BaseLayout>
+  <form
+    class="flex w-full flex-col items-center justify-center gap-8"
+    action={redirect}
+  >
+    <ChoiceCard header="บาร์เทนเดอร์ถามคุณว่า\nวันนี้คุณอยากดื่มอะไร">
+      <Button client:load text="วิสกี้" />
+      <Button client:load text="จิน" />
+      <Button client:load text="วอดก้า" />
+      <Button client:load text="รัม" />
+    </ChoiceCard>
+  </form>
+</BaseLayout>

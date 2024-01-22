@@ -1,0 +1,18 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Button from "@/components/story/Button";
+import ChoiceCard from "@/components/story/ChoiceCard";
+const redirect = "./Scene14"; //Temporary: Skip to the end of the story
+---
+
+<BaseLayout>
+  <form
+    class="flex w-full flex-col items-center justify-center gap-8"
+    action={redirect}
+  >
+    <ChoiceCard header="การที่คุณเข้าบาร์นี้มา ทำให้คุณมีความสุขไหม">
+      <Button client:load text="มี" />
+      <Button client:load text="เฉย ๆ" />
+    </ChoiceCard>
+  </form>
+</BaseLayout>

@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Tap from "../../components/story/Tap";
+---
+
+<BaseLayout>
+  นี่คือหน้าเปล่าที่แตะแล้วไปต่อได้ แต่เป็นหน้าสุดท้าย
+  <Tap client:load scored={true} />
+</BaseLayout>
