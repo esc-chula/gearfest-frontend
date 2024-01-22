@@ -1,6 +1,6 @@
 @font-face {
   font-family: "SukhumvitSet";
-  src: url("/fonts/SukhumvitSet/SukhumvitSet-Text.ttf");
+  src: url("/fonts/sukhumvit-set/SukhumvitSet-Text.ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "SukhumvitSet";
-  src: url("/fonts/SukhumvitSet/SukhumvitSet-Bold.ttf");
+  src: url("/fonts/sukhumvit-set/SukhumvitSet-Bold.ttf");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "SukhumvitSet";
-  src: url("/fonts/SukhumvitSet/SukhumvitSet-SemiBold.ttf");
+  src: url("/fonts/sukhumvit-set/SukhumvitSet-SemiBold.ttf");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "SukhumvitSet";
-  src: url("/fonts/SukhumvitSet/SukhumvitSet-Medium.ttf");
+  src: url("/fonts/sukhumvit-set/SukhumvitSet-Medium.ttf");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: "SukhumvitSet";
-  src: url("/fonts/SukhumvitSet/SukhumvitSet-Light.ttf");
+  src: url("/fonts/sukhumvit-set/SukhumvitSet-Light.ttf");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: "SukhumvitSet";
-  src: url("/fonts/SukhumvitSet/SukhumvitSet-Thin.ttf");
+  src: url("/fonts/sukhumvit-set/SukhumvitSet-Thin.ttf");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
