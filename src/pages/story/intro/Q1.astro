@@ -1,0 +1,37 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Button from "@/components/story/AnsButton";
+import Score from "@/components/story/Score.tsx";
+
+import { Image } from "astro:assets";
+
+import Background from "@/assets/images/barBackground.jpg";
+---
+
+<BaseLayout>
+  <div class="relative h-screen w-screen">
+    <div
+      class="border-vio-100 absolute left-1/2 top-1/2 z-50 h-[39.592274678%] w-[81.395348837%] -translate-x-1/2 -translate-y-1/2 rounded-md border-2 bg-white p-4"
+    >
+      <div
+        class="relative left-1/2 top-1/2 z-50 flex -translate-x-1/2 -translate-y-1/2 flex-col gap-4 object-contain"
+      >
+        <div class="mx-auto w-1/2 text-center text-xl">questionคำถาม</div>
+        <!-- <Score client:only /> -->
+        <Button client:load text="Option 1" page="/story/intro/Q2" />
+        <Button client:load text="Option 2" page="/story/intro/Q2" />
+        <Button client:load text="Option 3" page="/story/intro/Q2" />
+        <Button client:load text="Option 4" page="/story/intro/Q2" />
+      </div>
+    </div>
+    <div
+      class="absolute left-1/2 top-1/2 z-40 h-screen w-screen -translate-x-1/2 -translate-y-1/2"
+    >
+      <img
+        class="relative z-0 mx-auto h-screen w-screen object-cover"
+        src={Background.src}
+        alt="bar"
+      />
+    </div>
+  </div>
+</BaseLayout>
