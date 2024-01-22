@@ -1,5 +1,6 @@
 ---
 import "@/style.css";
+import { ViewTransitions } from "astro:transitions";
 interface Props {
   pageTitle?: string;
 }
@@ -14,6 +15,7 @@ const { pageTitle = "GearFestival" } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <ViewTransitions />
   </head>
   <body>
     <main

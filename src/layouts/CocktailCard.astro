@@ -1,34 +1,34 @@
 ---
-import { twMerge } from "tailwind-merge";
+import { Image } from "astro:assets";
+
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Card from "@/components/story/Card.tsx";
-import ButtonSet from "@/components/story/ButtonSet.tsx";
-import FooterDecorator from "@/components/story/FooterDecorator.tsx";
+import Card from "@/components/story/Card";
+import ButtonSet from "@/components/story/ButtonSet";
+import FooterDecorator from "@/components/story/FooterDecorator.astro";
+
 import Logo from "@/assets/elements/logo.png";
+import { BACKGROUND, type Cocktail } from "@/data/cocktail";
 
-const { id, name, img, bgbox, bg, accent, download } = Astro.props;
+interface Props extends Cocktail {
+  img: string;
+}
 
-const background = {
-  raspberry: "bg-raspberry",
-  cosmo: "bg-cosmo",
-  pina: "bg-pina",
-  gin: "bg-gin",
-  lagoon: "bg-lagoon",
-  lalemon: "bg-lalemon",
-};
-const classname = twMerge(
-  `relative flex w-full flex-col items-center justify-center gap-4 overflow-hidden bg-cover bg-repeat pb-8`,
-  background[bg]
-);
+const { variant, img } = Astro.props;
 ---
 
 <BaseLayout>
-  <div id={id} class={classname}>
-    <img src={Logo.src} class="mx-auto mt-8 w-20" />
-    <Card client:load name={name} img={img} bg={bgbox} accent={accent}>
+  <div
+    id="result"
+    class:list={[
+      "relative flex w-full flex-col items-center justify-center gap-4 overflow-hidden bg-cover bg-repeat pb-16",
+      BACKGROUND[variant],
+    ]}
+  >
+    <Image src={Logo} class="mx-auto mt-8 w-20" alt="" />
+    <Card client:load variant={variant} img={img}>
       <slot />
     </Card>
+    <ButtonSet client:load variant={variant} />
     <FooterDecorator />
-    <ButtonSet client:load accent={accent} bg={bgbox} img={download} id={id} />
   </div>
 </BaseLayout>

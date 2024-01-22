@@ -1,18 +1,9 @@
 ---
 import CocktailCard from "@/layouts/CocktailCard.astro";
 import Lavender from "@/assets/elements/lavender-lemonade.png";
-import DownloadLavender from "@/assets/elements/download-lavender.svg";
 ---
 
-<CocktailCard
-  id="result"
-  name="Lavender Lemonade"
-  img={Lavender.src}
-  bg="lalemon"
-  bgbox="lalemonbox"
-  accent="lavender"
-  download={DownloadLavender.src}
->
+<CocktailCard variant="lalemon" img={Lavender.src}>
   ลาเวนเดอร์ เลมอนเนด จิน ค็อกเทลสีม่วงน่าค้นหา
   <br />พร้อมส่วนผสมที่ประกอบไปด้วยจิน, น้ำเลม่อน, น้ำเชื่อมลาเวนเดอร์
   และน้ำโซดา สร้างความซับซ้อนในรสชาติ มีรสฝาดจากน้ำมะนาว

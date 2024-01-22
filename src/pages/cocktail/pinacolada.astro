@@ -1,18 +1,9 @@
 ---
 import CocktailCard from "@/layouts/CocktailCard.astro";
 import Pina from "@/assets/elements/pina-colada.png";
-import DownloadYellow from "@/assets/elements/download-yellow.svg";
 ---
 
-<CocktailCard
-  id="result"
-  name="Pina Colada"
-  img={Pina.src}
-  bg="pina"
-  bgbox="pinabox"
-  accent="pineapple"
-  download={DownloadYellow.src}
->
+<CocktailCard variant="pina" img={Pina.src}>
   น้ำสับปะรด, รัม, และครีมมะพร้าว
   <br />ทั้งสามสิ่งนี้คือส่วนผสมหลักที่ประกอบออกมาเป็นพีน่า โคลาดา
   เครื่องดื่มที่ให้ความรู้สึกถึงฤดูร้อนที่แดดจ้า

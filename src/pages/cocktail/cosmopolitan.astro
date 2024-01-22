@@ -1,18 +1,9 @@
 ---
 import CocktailCard from "@/layouts/CocktailCard.astro";
 import Cosmo from "@/assets/elements/cosmopolitan.png";
-import DownloadOrange from "@/assets/elements/download-orange.svg";
 ---
 
-<CocktailCard
-  id="result"
-  name="Cosmopolitan"
-  img={Cosmo.src}
-  bg="cosmo"
-  bgbox="cosmobox"
-  accent="peach"
-  download={DownloadOrange.src}
->
+<CocktailCard variant="cosmo" img={Cosmo.src}>
   วอดก้า แครนเบอรี่ และน้ำมะนาว สามส่วนผสมหลักที่เข้ากันได้อย่างไม่น่าเชื่อ
   รวมกันเป็นค็อกเทลรสเปรี้ยวอมหวานสีชมพูสดใส
   <br />ที่ครองใจสาว ๆ นักดื่มทั่วโลก

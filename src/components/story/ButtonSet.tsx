@@ -1,80 +1,43 @@
+import { BACKGROUND_BOX, TEXT, type Cocktail } from "@/data/cocktail";
+import { cn } from "@/lib/utils";
 import * as htmlToImage from "html-to-image";
-import { twMerge } from "tailwind-merge";
-interface Props {
-  accent: "salmon" | "peach" | "pineapple" | "leaf" | "tropical" | "lavender";
-  bg:
-    | "raspberrybox"
-    | "cosmobox"
-    | "pinabox"
-    | "ginbox"
-    | "lagoonbox"
-    | "lalemonbox";
-  img: string;
-  id: string;
-}
+interface Props extends Cocktail {}
 
-const ButtonSet = ({ accent, bg, img, id }: Props) => {
-  const background = {
-    raspberrybox: "bg-raspberrybox",
-    cosmobox: "bg-cosmobox",
-    pinabox: "bg-pinabox",
-    ginbox: "bg-ginbox",
-    lagoonbox: "bg-lagoonbox",
-    lalemonbox: "bg-lalemonbox",
-  };
-
-  const acc = {
-    salmon: "text-salmon",
-    peach: "text-peach",
-    pineapple: "text-pineapple",
-    leaf: "text-leaf",
-    tropical: "text-tropical",
-    lavender: "text-lavender",
-  };
-
+const ButtonSet = ({ variant }: Props): JSX.Element => {
   const downloadImage = () => {
-    document.getElementById("buttonSet").style.visibility = "hidden";
-    htmlToImage
-      .toJpeg(document.getElementById(id), { quality: 0.96 })
-      .then(function (dataUrl) {
-        const link = document.createElement("a");
-        link.download = "result.jpeg";
-        link.href = dataUrl;
-        link.click();
-        document.getElementById("buttonSet").style.visibility = "visible";
-      });
-  };
-
-  const handleClick = () => {
-    location.href = "../";
+    const result = document.getElementById("result");
+    if (!result) return;
+    htmlToImage.toJpeg(result, { quality: 0.96 }).then(function (dataUrl) {
+      const link = document.createElement("a");
+      link.download = "result.jpeg";
+      link.href = dataUrl;
+      link.click();
+    });
   };
 
   return (
-    <div
-      id="buttonSet"
-      className="relative mx-auto my-auto mt-2 flex w-64 gap-4"
-    >
-      <button
-        className={twMerge(
+    <div className="relative mx-auto mb-16 mt-2 flex w-64 gap-4" id="buttonset">
+      <a
+        href="/"
+        className={cn(
           `flex w-full flex-wrap items-center justify-center gap-4 rounded-3xl border border-rose-200 px-2 py-1.5
-        text-center text-[1rem] font-semibold shadow-md`,
-          background[bg],
-          acc[accent]
+        text-center font-semibold shadow-md`,
+          BACKGROUND_BOX[variant],
+          TEXT[variant]
         )}
-        onClick={handleClick}
       >
         กลับสู่หน้าหลัก
-      </button>
+      </a>
       <button
-        className={twMerge(
-          `flex w-full flex-wrap items-center justify-center gap-4 rounded-3xl border border-rose-200 px-2 py-1.5
-        text-center text-[1rem] font-semibold shadow-md`,
-          background[bg],
-          acc[accent]
+        className={cn(
+          `flex w-full flex-wrap items-center justify-center gap-2 rounded-3xl border border-rose-200 px-2 py-1.5
+        text-center font-semibold shadow-md`,
+          BACKGROUND_BOX[variant],
+          TEXT[variant]
         )}
         onClick={downloadImage}
       >
-        <img className="w-[20%]" src={img} />
+        <i className="icon-[mdi--download]"></i>
         บันทึกรูป
       </button>
     </div>

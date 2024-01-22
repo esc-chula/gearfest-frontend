@@ -1,18 +1,9 @@
 ---
 import CocktailCard from "@/layouts/CocktailCard.astro";
 import BlueLagoon from "@/assets/elements/blue-lagoon.png";
-import DownloadBlue from "@/assets/elements/download-blue.svg";
 ---
 
-<CocktailCard
-  id="result"
-  name="Blue Lagoon"
-  img={BlueLagoon.src}
-  bg="lagoon"
-  bgbox="lagoonbox"
-  accent="tropical"
-  download={DownloadBlue.src}
->
+<CocktailCard variant="lagoon" img={BlueLagoon.src}>
   บลู ลากูน – เครื่องดื่มสีสดใสที่เกิดจากการผสมกันระหว่าง
   <br />วอดก้า บลูคูราโซ่ และน้ำมะนาว เนื่องด้วยรสชาติที่ให้ความสดชื่น
   และสีสันที่สวยงามจึงเป็นเครื่องดื่มที่มักเป็นที่นิยมในงานสังสรรค์

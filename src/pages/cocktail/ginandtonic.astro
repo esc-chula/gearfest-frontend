@@ -1,18 +1,9 @@
 ---
 import CocktailCard from "@/layouts/CocktailCard.astro";
 import Gin from "@/assets/elements/gin-and-tonic.png";
-import DownloadGreen from "@/assets/elements/download-green.svg";
 ---
 
-<CocktailCard
-  id="result"
-  name="Gin and Tonic"
-  img={Gin.src}
-  bg="gin"
-  bgbox="ginbox"
-  accent="leaf"
-  download={DownloadGreen.src}
->
+<CocktailCard variant="gin" img={Gin.src}>
   ด้วยรสซิตรัสจาก “จิน”
   สุรากลั่นจากเมล็ดข้าวซึ่งมีกลิ่นหอมสดชื่นอันเป็นเอกลักษณ์จากผลจูนิเปอร์
   ผสมผสานกับ “โทนิค” เครื่องดื่มอัดแก๊สรสขมเพิ่มความซาบซ่า

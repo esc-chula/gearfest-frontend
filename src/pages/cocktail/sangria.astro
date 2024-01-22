@@ -1,18 +1,9 @@
 ---
 import CocktailCard from "@/layouts/CocktailCard.astro";
 import SBSangria from "@/assets/elements/summer-berry-sangria.png";
-import DownloadPink from "@/assets/elements/download-pink.svg";
 ---
 
-<CocktailCard
-  id="result"
-  name="Summer Berry Sangria"
-  img={SBSangria.src}
-  bg="raspberry"
-  bgbox="raspberrybox"
-  accent="salmon"
-  download={DownloadPink.src}
->
+<CocktailCard variant="raspberry" img={SBSangria.src}>
   เครื่องดื่มสีสดใสที่ประกอบไปด้วยไวน์ขาว, เตกีล่า, น้ำผลไม้, บลูเบอร์รี่,
   สตรอเบอร์รี่, ราสเบอร์รี่ และ เลม่อนโซดา
   <br /><br />
