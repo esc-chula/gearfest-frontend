@@ -1,0 +1,28 @@
+---
+import Scene from "../../images/IMG_1010.gif"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+---
+
+<BaseLayout>
+    <div class="relative h-full w-full"> 
+
+    <div class="fade-in">
+        <a href="/" class="absolute z-50 bottom-10 left-1/2 -translate-x-1/ text-black text-opacity-50 px-4 py-2 rounded-md text-center" onclick="handleContinueClick()">
+            Tap to<br/>Continue
+        </a>       
+    </div>
+
+    <img class="relative z-0 h-screen mx-auto object-contain" src={Scene.src}></img>
+</div>
+</BaseLayout>
+
+<style>
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .fade-in {
+        animation: fadeIn 2s ease-in-out;
+    }
+</style>
