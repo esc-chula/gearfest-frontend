@@ -3,37 +3,26 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import ScoredButton from "@/components/story/ScoredButton";
 import ChoiceCard from "@/components/story/ChoiceCard";
 const redirect = "./Scene9";
-import Background from "@/assets/images/barBackground.jpg";
+import Background from "@/components/story/barBackground.astro";
 ---
 
 <BaseLayout>
-  <div class="relative h-screen w-screen">
-    <form
-      class="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-8"
-      action={redirect}
-    >
-      <ChoiceCard header="คุณจะจัดทริปครั้งนี้ยังไง">
-        <ScoredButton
-          client:load
-          text="เลือกที่จะแวะเที่ยวตามทาง แวะตามที่เที่ยวต่าง ๆ\nหาประสบการณ์แปลกใหม่\nเพลิดเพลินกับการเดินทาง"
-          scores={[0, 2, 2, 1, 2, 0]}
-        />
-        <ScoredButton
-          client:load
-          text="ออกเดินทางไปยังจุดหมายโดยทันที\nโดยไม่ออกนอกลู่นอกทาง\nเพื่อให้จบงานได้เร็วที่สุด"
-          scores={[2, 0, 0, 0, 0, 2]}
-        />
-      </ChoiceCard>
-    </form>
-
-    <div
-      class="absolute left-1/2 top-1/2 z-40 h-screen w-screen -translate-x-1/2 -translate-y-1/2"
-    >
-      <img
-        class="relative z-0 mx-auto h-screen w-screen object-cover"
-        src={Background.src}
-        alt="bar"
+  <Background />
+  <form
+    class="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-8"
+    action={redirect}
+  >
+    <ChoiceCard header="คุณจะจัดทริปครั้งนี้ยังไง">
+      <ScoredButton
+        client:load
+        text="เลือกที่จะแวะเที่ยวตามทาง แวะตามที่เที่ยวต่าง ๆ\nหาประสบการณ์แปลกใหม่\nเพลิดเพลินกับการเดินทาง"
+        scores={[0, 2, 2, 1, 2, 0]}
       />
-    </div>
-  </div>
+      <ScoredButton
+        client:load
+        text="ออกเดินทางไปยังจุดหมายโดยทันที\nโดยไม่ออกนอกลู่นอกทาง\nเพื่อให้จบงานได้เร็วที่สุด"
+        scores={[2, 0, 0, 0, 0, 2]}
+      />
+    </ChoiceCard>
+  </form>
 </BaseLayout>

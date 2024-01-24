@@ -3,31 +3,20 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Button from "@/components/story/Button";
 import ChoiceCard from "@/components/story/ChoiceCard";
 const redirect = "./Q5";
-import Background from "@/assets/images/barBackground.jpg";
+import Background from "@/components/story/barBackground.astro";
 ---
 
 <BaseLayout>
-  <div class="relative h-screen w-screen">
-    <form
-      class="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-8"
-      action={redirect}
-    >
-      <ChoiceCard header="บาร์เทนเดอร์ถามคุณว่า\nวันนี้คุณอยากดื่มอะไร">
-        <Button client:load text="วิสกี้" />
-        <Button client:load text="จิน" />
-        <Button client:load text="วอดก้า" />
-        <Button client:load text="รัม" />
-      </ChoiceCard>
-    </form>
-
-    <div
-      class="absolute left-1/2 top-1/2 z-40 h-screen w-screen -translate-x-1/2 -translate-y-1/2"
-    >
-      <img
-        class="relative z-0 mx-auto h-screen w-screen object-cover"
-        src={Background.src}
-        alt="bar"
-      />
-    </div>
-  </div>
+  <Background />
+  <form
+    class="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-8"
+    action={redirect}
+  >
+    <ChoiceCard header="บาร์เทนเดอร์ถามคุณว่า\nวันนี้คุณอยากดื่มอะไร">
+      <Button client:load text="วิสกี้" />
+      <Button client:load text="จิน" />
+      <Button client:load text="วอดก้า" />
+      <Button client:load text="รัม" />
+    </ChoiceCard>
+  </form>
 </BaseLayout>
