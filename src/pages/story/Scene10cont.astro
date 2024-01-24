@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Tap from "../../components/story/Tap";
-import Bubble from "@/assets/elements/Bubble-box-1.png";
+import Bg from "@/assets/images/10cont-bg.png";
 import "@fontsource/mitr";
 ---
 
@@ -9,20 +9,19 @@ import "@fontsource/mitr";
   <div class="relative z-0 h-screen w-screen bg-black">
     <img
       class="fade-in-text relative z-0 mx-auto h-screen w-screen object-cover"
-      src={Bubble.src}
+      src={Bg.src}
       alt="bar"
     />
     <p
       class="fade-in-text absolute left-1/2 top-1/2 w-screen -translate-x-1/2 -translate-y-1/2 text-center font-['mitr'] text-xl text-black"
     >
-      จริง ๆ แล้วคุณก็อยากใช้ชีวิต<br />
-       เหมือนผมเลยนะ
+      เอ้า ชน
     </p>
-    <p
+    <!-- <p
       class="fade-in-text absolute left-[73.488372093%] top-[63.30472103%] text-center text-white/50"
     >
       Tap to<br />continue
-    </p>
+    </p> -->
   </div>
-  <Tap client:load redirect="./Scene10cont" />
+  <Tap client:load redirect="./Q10" />
 </BaseLayout>

@@ -2,7 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Button from "@/components/story/Button";
 import ChoiceCard from "@/components/story/ChoiceCard";
-const redirect = "./Q11A"; //Temporary: Skip to the end of the story
+const redirect = "./Q17";
 import Background from "@/components/story/barBackground.astro";
 ---
 
@@ -12,9 +12,12 @@ import Background from "@/components/story/barBackground.astro";
     class="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-8"
     action={redirect}
   >
-    <ChoiceCard header="การที่คุณเข้าบาร์นี้มา ทำให้คุณมีความสุขไหม">
-      <Button client:load text="มี" />
-      <Button client:load text="เฉย ๆ" />
+    <ChoiceCard header="มองเห็นตัวเองเป็นสีอะไร">
+      <Button client:load text="สีเขียว" />
+      <Button client:load text="สีชมพู" />
+      <Button client:load text="สีฟ้า" />
+      <Button client:load text="สีม่วง" />
+      <Button client:load text="สีเหลือง" />
     </ChoiceCard>
   </form>
 </BaseLayout>

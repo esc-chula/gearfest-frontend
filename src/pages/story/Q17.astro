@@ -1,0 +1,28 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Button from "@/components/story/Button";
+import ChoiceCard from "@/components/story/ChoiceCard";
+const redirect = "./Scene13";
+import Background from "@/components/story/barBackground.astro";
+---
+
+<BaseLayout>
+  <Background />
+  <form
+    class="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-8"
+    action={redirect}
+  >
+    <ChoiceCard
+      header="แล้วคุณอยากจะกล่าวอะไร\nกับผู้คนเหล่านั้น\n**มีscoreมั้ย??**"
+    >
+      <Button
+        client:load
+        text="เลือกที่จะแวะเที่ยวตามทางแวะตามที่เที่ยวต่าง ๆ\nหาประสบการ์ณแปลกใหม่\nเพลิดเพลินกับการเดินทางก่อนจะไปถึงที่ดูงาน"
+      />
+      <Button
+        client:load
+        text="ออกเดินทางไปยังจุดหมายโดยทันทีโดยที่ไม่ออก\nนอกลู่นอกทางเพื่อให้จบงานได้เร็วที่สุด"
+      />
+    </ChoiceCard>
+  </form>
+</BaseLayout>

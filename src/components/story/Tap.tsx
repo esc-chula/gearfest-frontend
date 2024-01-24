@@ -27,11 +27,11 @@ const Tap = ({ redirect, scored }: Props) => {
   }
   return (
     <a href={redirect} className="absolute my-auto h-full w-full opacity-50">
-      <p className="absolute bottom-72 right-8  text-center font-medium">
+      {/* <p className="absolute bottom-72 right-8  text-center font-medium">
         Tap to
         <br />
         continue
-      </p>
+      </p> */}
     </a>
   );
 };
