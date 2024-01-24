@@ -1,12 +1,14 @@
+import Bubblebox from "@/components/story/Bubblebox.tsx";
 import Tap from "@/components/story/Tap.tsx";
 import type { ImageMetadata } from "astro";
 import { useEffect, useState } from "react";
 
 interface Props {
   scene: ImageMetadata[];
+  endText: string;
 }
 
-const Scene2 = ({ scene }: Props) => {
+const NoStoryLoop = ({ scene, endText }: Props) => {
   const [sceneIndex, setSceneIndex] = useState(0);
 
   useEffect(() => {
@@ -22,7 +24,12 @@ const Scene2 = ({ scene }: Props) => {
 
   return (
     <>
-      {sceneIndex === scene.length - 1 ? <Tap /> : null}
+      {sceneIndex === scene.length - 1 ? (
+        <>
+          <Tap />
+          <Bubblebox endText={endText} />
+        </>
+      ) : null}
       <div className="h-screen w-full">
         <img className="h-screen w-full" src={scene[sceneIndex].src} />
       </div>
@@ -30,4 +37,4 @@ const Scene2 = ({ scene }: Props) => {
   );
 };
 
-export default Scene2;
+export default NoStoryLoop;
