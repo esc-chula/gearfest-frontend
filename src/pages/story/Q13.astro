@@ -1,0 +1,19 @@
+---
+import Scene from "../../images/bg_bar.JPG";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Textbox from "@/components/story/Textbox";
+import ChoiceCard from "@/components/story/ChoiceCard";
+const redirect = "./Scene12";
+---
+
+<BaseLayout>
+    <div class="flex flex-col items-center justify-center h-screen relative">
+      <img class="z-0 mx-auto object-contain" src={Scene.src} alt="Scene Image" />
+      <form class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-8" action={redirect}>
+        <ChoiceCard header="ถ้ามี ‘คนที่คุณรัก‘ \nมานั่งฟังเรื่องราวของคุณ \nคิดว่าเขาจะพูดอะไรกับคุณ">
+          <Textbox />
+        </ChoiceCard>
+      </form>
+    </div>
+  </BaseLayout>
+  

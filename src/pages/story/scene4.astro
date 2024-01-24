@@ -1,27 +1,23 @@
 ---
-import Scene from "../../images/IMG_1011.gif"
-import Craycircle from "../../images/Bubble box 1.png"
+import Scene from "../../images/Scene4.gif"
+import BubbleBox from "../../images/BubbleBox.png"
 import BaseLayout from "../../layouts/BaseLayout.astro"
+import Tap from "../../components/story/Tap.tsx"
 ---
 
 <BaseLayout>
     <div class="relative h-full w-full"> 
 
     <div class="fade-in">
-        <div class="absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="font-size: 16px">
+        <div class="absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="font-size: 16px; font-weight: bold">
             เป็นแผนที่ดีนะ
         </div>
-
         <div class="absolute z-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <img src={Craycircle.src} alt="Bubble box 1.png">
+            <img src={BubbleBox.src} alt="BubbleBox.png">
         </div>
-
-        <a href="/" class="absolute z-50 bottom-10 left-1/2 -translate-x-1/ text-black text-opacity-50 px-4 py-2 rounded-md text-center" onclick="handleContinueClick()">
-            Tap to<br/>Continue
-        </a>       
     </div>
-
     <img class="relative z-0 h-screen mx-auto object-contain" src={Scene.src}></img>
+    <div class="relative fade-in"><Tap redirect="./Q6"/></div>
 </div>
 </BaseLayout>
 

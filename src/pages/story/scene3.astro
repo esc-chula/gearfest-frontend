@@ -1,19 +1,14 @@
 ---
-import Scene from "../../images/IMG_1010.gif"
+import Scene from "../../images/Scene3.gif"
 import BaseLayout from "../../layouts/BaseLayout.astro"
+import Tap from "../../components/story/Tap.tsx"
 ---
 
 <BaseLayout>
     <div class="relative h-full w-full"> 
-
-    <div class="fade-in">
-        <a href="/" class="absolute z-50 bottom-10 left-1/2 -translate-x-1/ text-black text-opacity-50 px-4 py-2 rounded-md text-center" onclick="handleContinueClick()">
-            Tap to<br/>Continue
-        </a>       
+    <img class="relative z-0 h-screen mx-auto object-contain" src={Scene.src} />
+    <div class="relative fade-in"><Tap redirect="./Q4"/></div>
     </div>
-
-    <img class="relative z-0 h-screen mx-auto object-contain" src={Scene.src}></img>
-</div>
 </BaseLayout>
 
 <style>
