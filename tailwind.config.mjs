@@ -10,6 +10,8 @@ export default {
         sans: ["SukhumvitSet", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
+        signin:
+          "url(/src/assets/images/grain-bg.png), linear-gradient(170deg, #A283AB -10.14%, #0D3C56 69.45%);",
         raspberry:
           'url("/src/assets/images/grain-bg.png"), linear-gradient(170deg, #F9998C -10.14%, #650C17 98.39%)',
         raspberrybox:
@@ -29,6 +31,8 @@ export default {
         lalemonbox: "linear-gradient(166deg, #FBF6FE -16.07%, #E2C9E8 81.36%)",
       },
       colors: {
+        primary: "#864974",
+        base: "#E0E0E0",
         mutedpurple: "#864974",
         mutedbrown: "#6D5958",
         salmon: "#EB7676",
@@ -37,6 +41,10 @@ export default {
         leaf: "#547937",
         tropical: "#3884EB",
         lavender: "#8D61A7",
+      },
+      boxShadow: {
+        button:
+          "0px -4px 4px 0px rgba(0, 0, 0, 0.25) inset, 0px 2px 9px 0px rgba(0, 0, 0, 0.25);",
       },
     },
   },
