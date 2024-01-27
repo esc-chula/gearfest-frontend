@@ -1,8 +1,29 @@
 ---
+import { Image } from "astro:assets";
+
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import SignInBackground from "@/layouts/SignInBackground.astro";
+import Hero from "@/components/register-page/Hero.tsx";
+
+import escLogo from "@/assets/logo/esc-logo.png";
+import gearfestLogo from "@/assets/logo/gearfest-logo.png";
+import kntuLogo from "@/assets/logo/kntu-logo.png";
 ---
 
-<BaseLayout>
-  <!-- TODO: Show user's email here -->
-  <h1>email</h1>
+<BaseLayout pageTitle="Login">
+  <SignInBackground>
+    <div class="relative flex h-full w-full items-center justify-center px-14">
+      <div class="absolute top-20 flex">
+        <Image src={escLogo} alt="ESC Logo" width="92" height="92" />
+        <Image
+          src={gearfestLogo}
+          alt="Gear Festival 2023 Logo"
+          width="92"
+          height="92"
+        />
+        <Image src={kntuLogo} alt="KNTU Logo" width="92" height="92" />
+      </div>
+      <Hero client:load page="register" dDay={true} />
+    </div>
+  </SignInBackground>
 </BaseLayout>

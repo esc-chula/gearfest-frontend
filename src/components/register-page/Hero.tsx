@@ -1,5 +1,4 @@
-// import BarImage from "@/assets/images/bar.png";
-// import { Image } from "astro:assets";
+import BarImage from "@/assets/images/bar.png";
 
 interface Props {
   page: "register" | "start" | "redo";
@@ -10,7 +9,7 @@ const Hero = ({ page, dDay }: Props) => {
   return (
     <div className="w-full space-y-12">
       <div className="flex h-72 w-full items-end overflow-hidden rounded-lg bg-white">
-        {/* <Image src={BarImage} alt="Bar Image" /> */}
+        <img src={BarImage.src} alt="Bar Image" />
         {page === "redo" ? "result" : "Image"}
       </div>
       <>
