@@ -12,16 +12,21 @@ import kntuLogo from "@/assets/logo/kntu-logo.png";
 
 <BaseLayout pageTitle="Login">
   <SignInBackground>
-    <div class="relative flex h-full w-full items-center justify-center px-14">
-      <div class="absolute top-20 flex">
-        <Image src={escLogo} alt="ESC Logo" width="92" height="92" />
+    <div
+      class="relative flex h-full w-full flex-col items-center justify-center px-14 py-8"
+    >
+      <div class="grid grid-cols-3">
+        <Image src={escLogo} alt="ESC" class="rounded-full backdrop-blur-lg" />
         <Image
           src={gearfestLogo}
-          alt="Gear Festival 2023 Logo"
-          width="92"
-          height="92"
+          alt="Gear Festival 2023"
+          class="rounded-full backdrop-blur-lg"
         />
-        <Image src={kntuLogo} alt="KNTU Logo" width="92" height="92" />
+        <Image
+          src={kntuLogo}
+          alt="KNTU"
+          class="rounded-full backdrop-blur-lg"
+        />
       </div>
       <Hero client:load page="register" dDay={true} />
     </div>
