@@ -6,7 +6,7 @@ interface Props {
 const Button = ({ text, handleClick }: Props) => {
   return (
     <button
-      className="flex h-fit w-full flex-wrap items-center justify-center rounded-xl bg-mutedpurple px-4 py-3.5 text-center text-xs font-normal text-white"
+      className="font-sukhumvit flex h-fit w-full flex-wrap items-center justify-center rounded-xl bg-mutedpurple p-4 text-center text-base text-white"
       onClick={handleClick}
     >
       {text}

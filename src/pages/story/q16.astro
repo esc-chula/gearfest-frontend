@@ -1,0 +1,20 @@
+---
+import Button from "@/components/story/Button";
+import ChoiceCard from "@/components/story/ChoiceCard";
+import QLayout from "@/layouts/story/QLayout.astro";
+---
+
+<QLayout>
+  <form
+    class="flex w-full flex-col items-center justify-center gap-8"
+    action="/story/q17"
+  >
+    <ChoiceCard header="มองเห็นตัวเองเป็นสีอะไร">
+      <Button client:load text="สีเขียว" />
+      <Button client:load text="สีชมพู" />
+      <Button client:load text="สีฟ้า" />
+      <Button client:load text="สีม่วง" />
+      <Button client:load text="สีเหลือง" />
+    </ChoiceCard>
+  </form>
+</QLayout>

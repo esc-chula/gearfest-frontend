@@ -1,8 +1,43 @@
 ---
+import { Image } from "astro:assets";
+
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import SignInBackground from "@/layouts/SignInBackground.astro";
+import Hero from "@/components/register-page/Hero.tsx";
+
+import escLogo from "@/assets/logo/esc-logo.png";
+import gearfestLogo from "@/assets/logo/gearfest-logo.png";
+import kntuLogo from "@/assets/logo/kntu-logo.png";
+
+const { cookies, redirect } = Astro;
+
+const accessToken = cookies.get("sb-access-token");
+const refreshToken = cookies.get("sb-refresh-token");
+
+if (accessToken && refreshToken) {
+  return redirect("/dashboard");
+}
 ---
 
-<BaseLayout>
-  <!-- TODO: Show user's email here -->
-  <h1>email</h1>
+<BaseLayout pageTitle="Login">
+  <SignInBackground>
+    <div
+      class="relative flex h-full w-full flex-col items-center justify-center px-14 py-8"
+    >
+      <div class="grid grid-cols-3">
+        <Image src={escLogo} alt="ESC" class="rounded-full backdrop-blur-lg" />
+        <Image
+          src={gearfestLogo}
+          alt="Gear Festival 2023"
+          class="rounded-full backdrop-blur-lg"
+        />
+        <Image
+          src={kntuLogo}
+          alt="KNTU"
+          class="rounded-full backdrop-blur-lg"
+        />
+      </div>
+      <Hero client:load />
+    </div>
+  </SignInBackground>
 </BaseLayout>
