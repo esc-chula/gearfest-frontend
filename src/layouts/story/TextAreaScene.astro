@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ChoiceCard from "@/components/story/ChoiceCard";
+import Textbox from "@/components/story/Textbox";
+import Button from "@/components/story/Button";
+
+import Bar from "@/assets/images/bar.jpg";
+
+interface Props {
+  text: string;
+  redirect: string;
+}
+
+const { text, redirect } = Astro.props;
+---
+
+<BaseLayout>
+  <Image
+    class="absolute h-full w-full object-cover"
+    src={Bar}
+    alt=""
+    aria-hidden
+  />
+  <form action={redirect} class="z-10 mx-auto my-auto max-w-full px-8">
+    <ChoiceCard header={text}>
+      <Textbox />
+      <Button text="ไปต่อ" />
+    </ChoiceCard>
+  </form>
+</BaseLayout>

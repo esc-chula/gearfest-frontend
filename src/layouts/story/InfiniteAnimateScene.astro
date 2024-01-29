@@ -1,0 +1,33 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+import BubbleBox from "@/components/story/BubbleBox";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Tap from "@/components/story/Tap";
+
+interface Props {
+  text?: string;
+  redirect: string;
+  img?: ImageMetadata;
+}
+
+const { text, redirect, img } = Astro.props;
+---
+
+<BaseLayout>
+  {
+    img ? (
+      <Image
+        class="absolute h-full w-full object-cover"
+        src={img}
+        alt=""
+        aria-hidden
+      />
+    ) : (
+      <div class="absolute h-full w-full bg-black" aria-hidden />
+    )
+  }
+  {text && <BubbleBox client:load text={text} />}
+  <Tap client:load redirect={redirect} />
+</BaseLayout>
