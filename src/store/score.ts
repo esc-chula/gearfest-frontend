@@ -22,4 +22,8 @@ export function addScores(values: Record<number, number>, multiplier: number) {
   scores.set(updatedScores);
 }
 
+export function resetScores() {
+  scores.set(initialValue);
+}
+
 export default scores;

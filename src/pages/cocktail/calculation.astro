@@ -1,21 +1,5 @@
 ---
-import scores from "@/store/score";
-
-const url: Record<number, string> = {
-  0: "/cocktail/sangria",
-  1: "/cocktail/cosmopolitan",
-  2: "/cocktail/pinacolada",
-  3: "/cocktail/ginandtonic",
-  4: "/cocktail/bluelagoon",
-  5: "/cocktail/lavenderlemonade",
-};
-const scoreMap: { [key: string]: number } = scores.get();
-const fullscore = [16, 15, 16, 15, 17, 13];
-const product: number[] = [];
-for (let i = 0; i < fullscore.length; i++) {
-  product.push(scoreMap[i] / fullscore[i]);
-}
-const maxScore = Math.max(...product);
-const maxKey = product.indexOf(maxScore);
-return Astro.redirect(url[maxKey]);
+import Calc from "@/components/story/Calculation";
 ---
+
+<Calc client:only />
