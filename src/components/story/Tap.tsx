@@ -1,37 +1,40 @@
-import scores from "../../store/score.ts";
-const score = scores.get();
+import { animate, motion, useMotionValue } from "framer-motion";
+import { useEffect } from "react";
+
 interface Props {
-  redirect?: string;
-  scored?: boolean;
+  redirect: string;
 }
 
-const Tap = ({ redirect, scored }: Props) => {
-  if (scored) {
-    const url = {
-      0: "../cocktail/sangria",
-      1: "../cocktail/cosmopolitan",
-      2: "../cocktail/pinacolada",
-      3: "../cocktail/ginandtonic",
-      4: "../cocktail/bluelagoon",
-      5: "../cocktail/lavenderlemonade",
-    };
-    const scoreMap: { [key: string]: number } = score;
-    const fullscore = [16, 15, 16, 15, 17, 13];
-    const product: number[] = [];
-    for (let i = 0; i < fullscore.length; i++) {
-      product.push(scoreMap[i] / fullscore[i]);
-    }
-    const maxScore = Math.max(...product);
-    const maxKey = product.indexOf(maxScore);
-    redirect = url[maxKey];
-  }
+const Tap = ({ redirect }: Props) => {
+  const opacity = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  useEffect(() => {
+    animate(opacity, 1, {
+      duration: 1.5,
+      delay: 2,
+    });
+
+    animate(y, 10, {
+      duration: 1,
+      repeat: Infinity,
+      repeatType: "reverse",
+    });
+  }, []);
+
   return (
-    <a href={redirect} className="absolute my-auto h-full w-full opacity-50">
-      {/* <p className="absolute bottom-72 right-8  text-center font-medium">
+    <a
+      href={redirect}
+      className="absolute z-50 flex h-screen w-full text-center font-medium text-white/100"
+    >
+      <motion.p
+        className="absolute bottom-1/4 right-8 z-50 rounded-full"
+        style={{ opacity, y }}
+      >
         Tap to
         <br />
         continue
-      </p> */}
+      </motion.p>
     </a>
   );
 };
