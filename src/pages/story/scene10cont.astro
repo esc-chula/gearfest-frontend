@@ -1,19 +1,19 @@
 ---
-import { Image } from "astro:assets";
-
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Tap from "@/components/story/Tap";
-import Bg from "@/assets/images/10cont-bg.png";
-import BubbleBox from "@/components/story/BubbleBox";
+import Scene2Anim from "@/components/story/bg-animation/NoStoryLoop";
+
+import img1 from "@/assets/scene/scene10cont/1.png";
+import img2 from "@/assets/scene/scene10cont/2.png";
+import img3 from "@/assets/scene/scene10cont/3.png";
+import img4 from "@/assets/scene/scene10cont/4.png";
+import img5 from "@/assets/scene/scene10cont/5.png";
 ---
 
 <BaseLayout>
-  <Image
-    class="absolute h-full w-full object-cover"
-    src={Bg}
-    alt=""
-    aria-hidden
+  <Scene2Anim
+    client:load
+    scene={[img1, img2, img3, img4, img5]}
+    endText="เอ้า ชน"
+    redirect="/story/q10"
   />
-  <BubbleBox client:load text="เอ้า ชน" />
-  <Tap client:load redirect="/story/q10" />
 </BaseLayout>
