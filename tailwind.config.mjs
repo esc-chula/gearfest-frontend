@@ -7,7 +7,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["SukhumvitSet", ...defaultTheme.fontFamily.sans],
+        mitr: ["Mitr", ...defaultTheme.fontFamily.sans],
+        ibm: ["IBM Plex Sans Thai", ...defaultTheme.fontFamily.sans],
+        sukhumvit: ["SukhumvitSet", ...defaultTheme.fontFamily.sans],
+        sans: [
+          "Mitr",
+          "IBM Plex Sans Thai",
+          "SukhumvitSet",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       backgroundImage: {
         signin:
@@ -32,7 +40,7 @@ export default {
       },
       colors: {
         primary: "#864974",
-        base: "#E0E0E0",
+        gray: "#E0E0E0",
         mutedpurple: "#864974",
         mutedbrown: "#6D5958",
         salmon: "#EB7676",

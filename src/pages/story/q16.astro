@@ -1,16 +1,13 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
 import Button from "@/components/story/Button";
 import ChoiceCard from "@/components/story/ChoiceCard";
-const redirect = "./Q17";
-import Background from "@/components/story/barBackground.astro";
+import QLayout from "@/layouts/story/QLayout.astro";
 ---
 
-<BaseLayout>
-  <Background />
+<QLayout>
   <form
-    class="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-8"
-    action={redirect}
+    class="flex w-full flex-col items-center justify-center gap-8"
+    action="/story/q17"
   >
     <ChoiceCard header="มองเห็นตัวเองเป็นสีอะไร">
       <Button client:load text="สีเขียว" />
@@ -20,4 +17,4 @@ import Background from "@/components/story/barBackground.astro";
       <Button client:load text="สีเหลือง" />
     </ChoiceCard>
   </form>
-</BaseLayout>
+</QLayout>

@@ -1,10 +1,10 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
 import ScoredButton from "@/components/story/ScoredButton";
 import ChoiceCard from "@/components/story/ChoiceCard";
+import QLayout from "@/layouts/story/QLayout.astro";
 ---
 
-<BaseLayout>
+<QLayout>
   <form
     class="flex w-full flex-col items-center justify-center gap-8"
     action="/story/scene5"
@@ -12,10 +12,30 @@ import ChoiceCard from "@/components/story/ChoiceCard";
     <ChoiceCard
       header="บาร์เทนเดอร์ถามคุณต่อ\nถ้าคุณได้เครื่องดื่มที่ทำให้มี\nพลังวิเศษได้ คุณอยากมีพลังอะไร"
     >
-      <ScoredButton client:load text="อ่านใจ" scores={[2, 0, 1, 0, 1, 2]} />
-      <ScoredButton client:load text="ย้อนเวลา" scores={[2, 0, 0, 2, 1, 1]} />
-      <ScoredButton client:load text="ล่องหน" scores={[0, 2, 0, 2, 2, 1]} />
-      <ScoredButton client:load text="เห็นอนาคต" scores={[2, 0, 0, 1, 1, 1]} />
+      <ScoredButton
+        client:load
+        text="อ่านใจ"
+        scores={[2, 0, 1, 0, 1, 2]}
+        multiplier={1.5}
+      />
+      <ScoredButton
+        client:load
+        text="ย้อนเวลา"
+        scores={[2, 0, 0, 2, 1, 1]}
+        multiplier={1.5}
+      />
+      <ScoredButton
+        client:load
+        text="ล่องหน"
+        scores={[0, 2, 0, 2, 2, 1]}
+        multiplier={1.5}
+      />
+      <ScoredButton
+        client:load
+        text="เห็นอนาคต"
+        scores={[2, 0, 0, 1, 1, 1]}
+        multiplier={1.5}
+      />
     </ChoiceCard>
   </form>
-</BaseLayout>
+</QLayout>

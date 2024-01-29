@@ -1,10 +1,10 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
 import ScoredButton from "@/components/story/ScoredButton";
 import ChoiceCard from "@/components/story/ChoiceCard";
+import QLayout from "@/layouts/story/QLayout.astro";
 ---
 
-<BaseLayout>
+<QLayout>
   <form
     class="flex w-full flex-col items-center justify-center gap-8"
     action="/story/scene7"
@@ -14,17 +14,20 @@ import ChoiceCard from "@/components/story/ChoiceCard";
         client:load
         text="ไม่ดื่มดีกว่า"
         scores={[2, 0, 0, 0, 0, 0]}
+        multiplier={1.5}
       />
       <ScoredButton
         client:load
         text="ชิมสักหน่อย"
         scores={[0, 2, 1, 1, 1, 2]}
+        multiplier={1.5}
       />
       <ScoredButton
         client:load
         text="ดื่มเลย แปลกใหม่"
         scores={[0, 2, 2, 0, 2, 2]}
+        multiplier={1.5}
       />
     </ChoiceCard>
   </form>
-</BaseLayout>
+</QLayout>
