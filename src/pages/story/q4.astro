@@ -1,10 +1,10 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
 import Button from "@/components/story/Button";
 import ChoiceCard from "@/components/story/ChoiceCard";
+import QLayout from "@/layouts/story/QLayout.astro";
 ---
 
-<BaseLayout>
+<QLayout>
   <form
     class="flex w-full flex-col items-center justify-center gap-8"
     action="/story/q5"
@@ -16,4 +16,4 @@ import ChoiceCard from "@/components/story/ChoiceCard";
       <Button client:load text="รัม" />
     </ChoiceCard>
   </form>
-</BaseLayout>
+</QLayout>

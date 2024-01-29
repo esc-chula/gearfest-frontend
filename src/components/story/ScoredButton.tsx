@@ -4,11 +4,12 @@ import Button from "./Button";
 interface Props {
   text: string;
   scores: number[];
+  multiplier?: number;
 }
 
-const ScoredButton = ({ text, scores }: Props): JSX.Element => {
+const ScoredButton = ({ text, scores, multiplier }: Props): JSX.Element => {
   const handleClick = () => {
-    addScores(scores);
+    addScores(scores, multiplier ?? 1);
   };
 
   return <Button text={text} handleClick={handleClick} />;

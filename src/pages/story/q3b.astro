@@ -1,10 +1,10 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
 import ScoredButton from "@/components/story/ScoredButton";
 import ChoiceCard from "@/components/story/ChoiceCard";
+import QLayout from "@/layouts/story/QLayout.astro";
 ---
 
-<BaseLayout>
+<QLayout>
   <form
     class="flex w-full flex-col items-center justify-center gap-8"
     action="/story/transition2-3"
@@ -12,19 +12,22 @@ import ChoiceCard from "@/components/story/ChoiceCard";
     <ChoiceCard header="เพลงที่เปิดอยู่ในบาร์เป็นยังไง">
       <ScoredButton
         client:load
-        text="เพลงเบา ๆ คลอ ๆ"
+        text="เพลงเบา ๆ คลอ ๆ เทสดี"
         scores={[1, 1, 0, 1, 0, 0]}
+        multiplier={1.5}
       />
       <ScoredButton
         client:load
-        text="เพลงเศร้า อกหัก เคล้าน้ำตา"
+        text="เพลงเศร้า อกหัก"
         scores={[0, 1, 0, 2, 1, 0]}
+        multiplier={1.5}
       />
       <ScoredButton
         client:load
         text="เพลงสนุก แด๊นซ์กระจาย"
         scores={[0, 1, 2, 0, 2, 0]}
+        multiplier={1.5}
       />
     </ChoiceCard>
   </form>
-</BaseLayout>
+</QLayout>

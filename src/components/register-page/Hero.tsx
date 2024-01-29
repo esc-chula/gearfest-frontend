@@ -1,4 +1,4 @@
-import BarImage from "@/assets/images/bar.png";
+import BarImage from "@/assets/images/bar.jpg";
 
 const Hero = () => {
   const isDDay = new Date().getTime() > new Date("2024-02-03").getTime();
@@ -10,11 +10,11 @@ const Hero = () => {
       </div>
       {isDDay ? (
         <div className="space-y-4">
-          <button className="flex h-fit w-full flex-wrap items-center justify-center gap-6 rounded-lg bg-base px-4 py-2.5 text-center text-xl font-semibold text-primary shadow-button">
+          <button className="bg-gray flex h-fit w-full flex-wrap items-center justify-center gap-6 rounded-lg px-4 py-2.5 text-center text-xl font-semibold text-primary shadow-button">
             เริ่มต้นการทำแบบทดสอบ
           </button>
 
-          <button className="flex h-fit w-full flex-wrap items-center justify-center gap-6 rounded-lg bg-base px-4 py-2.5 text-center text-xl font-semibold text-primary shadow-button">
+          <button className="bg-gray flex h-fit w-full flex-wrap items-center justify-center gap-6 rounded-lg px-4 py-2.5 text-center text-xl font-semibold text-primary shadow-button">
             ลงทะเบียนเข้างาน
           </button>
         </div>
@@ -25,7 +25,7 @@ const Hero = () => {
           action="/api/auth/signin"
         >
           <button
-            className="flex h-fit w-full flex-wrap items-center justify-center gap-6 rounded-lg bg-base px-4 py-2.5 text-center text-xl font-semibold text-primary shadow-button"
+            className="bg-gray flex h-fit w-full flex-wrap items-center justify-center gap-6 rounded-lg px-4 py-2.5 text-center text-xl font-semibold text-primary shadow-button"
             type="submit"
           >
             <i className="icon-[devicon--google] h-7 w-7"></i>Register with

@@ -14,10 +14,10 @@ const scores = persistentAtom("scores", initialValue, {
   decode: JSON.parse,
 });
 
-export function addScores(values: Record<number, number>) {
+export function addScores(values: Record<number, number>, multiplier: number) {
   const updatedScores = scores.get();
   for (const key in values) {
-    updatedScores[key] += values[key];
+    updatedScores[key] += values[key] * multiplier;
   }
   scores.set(updatedScores);
 }

@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import Bar from "@/assets/images/bar.jpg";
+---
+
+<BaseLayout>
+  <Image
+    class="absolute -z-10 h-full w-full object-cover"
+    src={Bar}
+    alt=""
+    aria-hidden
+  />
+  <slot />
+</BaseLayout>
