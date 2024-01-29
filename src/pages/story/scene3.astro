@@ -1,23 +1,7 @@
 ---
-import Scene from "../../images/Scene3.gif"
-import BaseLayout from "../../layouts/BaseLayout.astro"
-import Tap from "../../components/story/Tap.tsx"
+import InfiniteAnimateScene from "@/layouts/story/InfiniteAnimateScene.astro";
+
+import Scene from "@/assets/images/Scene3.gif";
 ---
 
-<BaseLayout>
-    <div class="relative h-full w-full"> 
-    <img class="relative z-0 h-screen mx-auto object-contain" src={Scene.src} />
-    <div class="relative fade-in"><Tap redirect="./Q4"/></div>
-    </div>
-</BaseLayout>
-
-<style>
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    .fade-in {
-        animation: fadeIn 2s ease-in-out;
-    }
-</style>
+<InfiniteAnimateScene img={Scene} redirect="/story/q4" />

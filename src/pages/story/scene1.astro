@@ -1,43 +1,11 @@
 ---
-import Scene from "../../images/Scene1.gif"
-import BubbleBox from "../../images/BubbleBox.png"
-import BaseLayout from "../../layouts/BaseLayout.astro"
-import Tap from "../../components/story/Tap.tsx"
+import InfiniteAnimateScene from "@/layouts/story/InfiniteAnimateScene.astro";
+
+import Scene from "@/assets/images/Scene1.gif";
 ---
 
-<BaseLayout>
-    <div class="relative h-full w-full">
-  
-      <div class="fade-in">
-        <div class="absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center" style="font-size: 16px; font-weight: bold">
-          เฮ้ออ<br/>หมดไปอีกหนึ่งวัน
-        </div>
-        <div class="absolute z-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <img src={BubbleBox.src} alt="Bubble box 1.png">
-        </div>
-      </div>
-      
-      <img class="relative z-0 h-screen mx-auto object-contain" src={Scene.src}></img>
-  
-      <div class="relative fade-in">
-        <Tap redirect="./Scene2"/>
-      </div>
-    </div>
-  </BaseLayout>
-  
-  <style>
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-  
-    .fade-in {
-      animation: fadeIn 2s ease-in-out;
-    }
-  
-    /* Add a class for bold Thai text */
-    .bold-thai {
-      font-weight: bold;
-    }
-  </style>
-  
+<InfiniteAnimateScene
+  img={Scene}
+  text="เฮ้ออ<br />หมดไปอีกหนึ่งวัน"
+  redirect="/story/scene2"
+/>

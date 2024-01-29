@@ -1,33 +1,7 @@
 ---
-import Scene from "../../images/Scene4.gif"
-import BubbleBox from "../../images/BubbleBox.png"
-import BaseLayout from "../../layouts/BaseLayout.astro"
-import Tap from "../../components/story/Tap.tsx"
+import InfiniteAnimateScene from "@/layouts/story/InfiniteAnimateScene.astro";
+
+import Scene from "@/assets/images/Scene4.gif";
 ---
 
-<BaseLayout>
-    <div class="relative h-full w-full"> 
-
-    <div class="fade-in">
-        <div class="absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="font-size: 16px; font-weight: bold">
-            เป็นแผนที่ดีนะ
-        </div>
-        <div class="absolute z-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <img src={BubbleBox.src} alt="BubbleBox.png">
-        </div>
-    </div>
-    <img class="relative z-0 h-screen mx-auto object-contain" src={Scene.src}></img>
-    <div class="relative fade-in"><Tap redirect="./Q6"/></div>
-</div>
-</BaseLayout>
-
-<style>
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    .fade-in {
-        animation: fadeIn 2s ease-in-out;
-    }
-</style>
+<InfiniteAnimateScene img={Scene} text="เป็นแผนที่ดีนะ" redirect="/story/q6" />

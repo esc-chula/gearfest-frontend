@@ -2,18 +2,16 @@ import type { ReactNode } from "react";
 
 interface Props {
   header: string;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 const ChoiceCard = ({ header, children }: Props) => {
   return (
     <div
-      className="border-1 mt-1 flex h-fit w-80 flex-wrap items-center justify-center gap-2 rounded-2xl
-        border border-mutedpurple bg-white px-8 py-8 text-center font-sans shadow-md"
+      className="flex h-fit w-72 max-w-full flex-wrap items-center justify-center gap-6 rounded-lg
+        border border-mutedpurple bg-white px-4 py-8 text-center font-sans shadow-md"
     >
-      <p className="mb-4 whitespace-pre-line text-lg font-bold text-mutedpurple">
-        {header}
-      </p>
+      <p className="whitespace-pre-line text-xl text-mutedpurple">{header}</p>
       {children}
     </div>
   );
