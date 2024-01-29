@@ -5,10 +5,10 @@ export const supabase = createClient(
   import.meta.env.SUPABASE_ANON_KEY,
   {
     auth: {
-        flowType: "pkce",
-        // autoRefreshToken: false,
-        // detectSessionInUrl: false,
-        // persistSession: true,
+      flowType: "pkce",
+      // autoRefreshToken: false,
+      // detectSessionInUrl: false,
+      // persistSession: true,
     },
-  },
+  }
 );
