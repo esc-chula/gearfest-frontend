@@ -1,4 +1,5 @@
 import type { APIRoute } from "astro";
+
 import { supabase } from "@/lib/supabase";
 
 export const GET: APIRoute = async ({ url, cookies, redirect }) => {
@@ -23,5 +24,5 @@ export const GET: APIRoute = async ({ url, cookies, redirect }) => {
     path: "/",
   });
 
-  return redirect("/dashboard");
+  return redirect("/");
 };
