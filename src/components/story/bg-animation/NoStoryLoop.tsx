@@ -1,5 +1,5 @@
-import Bubblebox from "@/components/story/Bubblebox.tsx";
-import Tap from "@/components/story/Tap.tsx";
+import Bubblebox from "@/components/story/BubbleBox";
+import Tap from "@/components/story/Tap";
 import type { ImageMetadata } from "astro";
 import { useEffect, useState } from "react";
 
@@ -25,15 +25,16 @@ const NoStoryLoop = ({ scene, endText, redirect }: Props) => {
 
   return (
     <>
-      {sceneIndex === scene.length - 1 ? (
+      <img
+        className="absolute h-full w-full object-cover"
+        src={scene[sceneIndex].src}
+      />
+      {sceneIndex === scene.length - 1 && (
         <>
+          <Bubblebox text={endText} />
           <Tap redirect={redirect} />
-          <Bubblebox endText={endText} />
         </>
-      ) : null}
-      <div className="h-screen w-full">
-        <img className="h-screen w-full" src={scene[sceneIndex].src} />
-      </div>
+      )}
     </>
   );
 };
