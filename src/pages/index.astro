@@ -9,14 +9,9 @@ import escLogo from "@/assets/logo/esc-logo.png";
 import gearfestLogo from "@/assets/logo/gearfest-logo.png";
 import kntuLogo from "@/assets/logo/kntu-logo.png";
 
-const { cookies, redirect } = Astro;
+const { cookies } = Astro;
 
-const accessToken = cookies.get("sb-access-token");
-const refreshToken = cookies.get("sb-refresh-token");
-
-if (accessToken && refreshToken) {
-  return redirect("/dashboard");
-}
+const accessToken = cookies.get("sb-access-token")?.value;
 ---
 
 <BaseLayout pageTitle="Login">
