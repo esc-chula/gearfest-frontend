@@ -6,9 +6,10 @@ import { useEffect, useState } from "react";
 interface Props {
   scene: ImageMetadata[];
   endText: string;
+  redirect: string;
 }
 
-const NoStoryLoop = ({ scene, endText }: Props) => {
+const NoStoryLoop = ({ scene, endText, redirect }: Props) => {
   const [sceneIndex, setSceneIndex] = useState(0);
 
   useEffect(() => {
@@ -26,7 +27,7 @@ const NoStoryLoop = ({ scene, endText }: Props) => {
     <>
       {sceneIndex === scene.length - 1 ? (
         <>
-          <Tap />
+          <Tap redirect={redirect} />
           <Bubblebox endText={endText} />
         </>
       ) : null}
