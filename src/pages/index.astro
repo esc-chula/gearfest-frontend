@@ -32,7 +32,7 @@ const accessToken = cookies.get("sb-access-token")?.value;
           class="rounded-full backdrop-blur-lg"
         />
       </div>
-      <Hero client:load />
+      <Hero client:load accessToken={accessToken} />
     </div>
   </SignInBackground>
 </BaseLayout>
