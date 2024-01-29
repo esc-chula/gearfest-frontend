@@ -16,7 +16,7 @@ const Calculation = () => {
       5: "/cocktail/lavenderlemonade",
     };
     const scoreMap: { [key: string]: number } = $scores;
-    const fullscore = [16, 15, 16, 15, 17, 13];
+    const fullscore = [40, 52, 45.5, 49, 49.5, 42.5];
     const product: number[] = [];
     for (let i = 0; i < fullscore.length; i++) {
       product.push(scoreMap[i] / fullscore[i]);
