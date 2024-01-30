@@ -27,7 +27,7 @@ const Hero = ({ accessToken }: HeroProps): JSX.Element => {
         )}
 
         {!accessToken && (
-          <form action="/api/auth/signin" method="get">
+          <form action="/api/auth/signin" method="post" data-astro-reload>
             <button
               value="google"
               name="provider"
