@@ -12,6 +12,7 @@ import kntuLogo from "@/assets/logo/kntu-logo.png";
 const { cookies } = Astro;
 
 const accessToken = cookies.get("sb-access-token")?.value;
+const cocktail = cookies.get("cocktail")?.value;
 ---
 
 <BaseLayout pageTitle="Login">
@@ -32,7 +33,7 @@ const accessToken = cookies.get("sb-access-token")?.value;
           class="rounded-full backdrop-blur-lg"
         />
       </div>
-      <Hero client:load accessToken={accessToken} />
+      <Hero client:load accessToken={accessToken} cocktail={cocktail} />
     </div>
   </SignInBackground>
 </BaseLayout>
