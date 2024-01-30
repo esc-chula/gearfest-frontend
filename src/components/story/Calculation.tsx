@@ -24,7 +24,9 @@ const Calculation = () => {
     }
     const maxScore = Math.max(...product);
     const maxKey = product.indexOf(maxScore);
-    setCookie("cocktail", url[maxKey].toString());
+    setCookie("cocktail", url[maxKey].toString(), {
+      path: "/",
+    });
     if (window) window.location.href = "/cocktail/" + url[maxKey];
   }, []);
 };
