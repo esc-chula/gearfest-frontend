@@ -9,11 +9,12 @@ import Button from "@/components/story/Button";
 import Bar from "@/assets/images/bar.jpg";
 
 interface Props {
+  id?: string;
   text: string;
   redirect: string;
 }
 
-const { text, redirect } = Astro.props;
+const { text, redirect, id } = Astro.props;
 ---
 
 <BaseLayout>
@@ -25,7 +26,7 @@ const { text, redirect } = Astro.props;
   />
   <form action={redirect} class="z-10 mx-auto my-auto max-w-full px-8">
     <ChoiceCard header={text}>
-      <Textbox />
+      <Textbox client:load id={id} />
       <Button text="ไปต่อ" />
     </ChoiceCard>
   </form>
