@@ -7,12 +7,13 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Tap from "@/components/story/Tap";
 
 interface Props {
+  noBubble?: boolean;
   text?: string;
   redirect: string;
   img?: ImageMetadata;
 }
 
-const { text, redirect, img } = Astro.props;
+const { text, redirect, img, noBubble } = Astro.props;
 ---
 
 <BaseLayout>
@@ -28,6 +29,13 @@ const { text, redirect, img } = Astro.props;
       <div class="absolute h-full w-full bg-black" aria-hidden />
     )
   }
-  {text && <BubbleBox client:load text={text} />}
+  {
+    noBubble && (
+      <div class="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center px-12 text-center font-bold text-white">
+        {text}
+      </div>
+    )
+  }
+  {!noBubble && text && <BubbleBox client:load text={text} />}
   <Tap client:load redirect={redirect} />
 </BaseLayout>
