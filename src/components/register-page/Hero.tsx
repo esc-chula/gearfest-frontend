@@ -1,8 +1,10 @@
-import BarImage from "@/assets/images/bar.jpg";
-import PageImage from "@/assets/images/Scene14.gif";
-import parser from "@/utils/parser";
 import { useCallback, useMemo } from "react";
 import { useCookies } from "react-cookie";
+
+import parser from "@/utils/parser";
+
+import BarImage from "@/assets/images/bar.jpg";
+import PageImage from "@/assets/images/Scene14.gif";
 
 interface HeroProps {
   accessToken: string | undefined;

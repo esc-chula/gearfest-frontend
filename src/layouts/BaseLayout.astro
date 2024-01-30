@@ -1,8 +1,9 @@
 ---
-import "@/styles/global.css";
 import "@fontsource/mitr/thai-400.css";
 import "@fontsource/ibm-plex-sans-thai/thai-600.css";
 import "@fontsource/ibm-plex-sans-thai/thai-500.css";
+
+import "@/styles/global.css";
 
 import { ViewTransitions } from "astro:transitions";
 interface Props {
@@ -23,9 +24,24 @@ const { pageTitle = "GearFestival" } = Astro.props;
   </head>
   <body>
     <main
-      class="absolute left-1/2 flex min-h-dvh w-full max-w-md -translate-x-1/2 font-sans"
+      class="absolute left-1/2 flex min-h-dvh w-full max-w-md -translate-x-1/2 bg-black font-sans"
     >
       <slot />
     </main>
+    <script>
+      import { Howl } from "howler";
+      const sound = new Howl({
+        src: ["/music/night-jazz.mp3"],
+        loop: true,
+        volume: 0.5,
+      });
+      document.addEventListener("astro:page-load", () => {
+        if (window.location.pathname === "/story/scene1") {
+          sound.play();
+        } else if (!window.location.pathname.startsWith("/story")) {
+          sound.stop();
+        }
+      });
+    </script>
   </body>
 </html>
