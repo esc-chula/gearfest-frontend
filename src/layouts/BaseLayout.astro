@@ -34,6 +34,7 @@ const { pageTitle = "GearFestival" } = Astro.props;
         src: ["/music/night-jazz.mp3"],
         loop: true,
         volume: 0.5,
+        html5: true,
         onplayerror: function () {
           sound.once("unlock", function () {
             sound.play();
