@@ -50,7 +50,7 @@ const Hero = ({ accessToken, cocktail }: HeroProps): JSX.Element => {
           </div>
         )}
       </div>
-      <div className="w-full space-y-4">
+      <div className="flex w-full flex-col space-y-4">
         {cocktail && (
           <button
             onClick={handleReset}
@@ -80,10 +80,21 @@ const Hero = ({ accessToken, cocktail }: HeroProps): JSX.Element => {
               type="submit"
               className="flex h-fit w-full flex-wrap items-center justify-center gap-2 rounded-lg bg-gray px-4 py-2.5 text-center font-sukhumvit text-xl font-bold text-primary shadow-button outline-none"
             >
-              <i className="icon-[devicon--google] h-5 w-5"></i>Login with
+              <i className="icon-[devicon--google] h-5 w-5"></i>Sign in with
               google
             </button>
           </form>
+        )}
+
+        {accessToken && (
+          <a href="/api/auth/signout">
+            <button
+              type="button"
+              className="mx-auto flex h-fit flex-wrap items-center justify-center rounded-lg bg-primary px-4 py-1.5 text-center font-sukhumvit font-bold text-gray shadow-button outline-none"
+            >
+              Sign out
+            </button>
+          </a>
         )}
       </div>
     </div>
