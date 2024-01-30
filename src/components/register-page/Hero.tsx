@@ -3,8 +3,8 @@ import { useCookies } from "react-cookie";
 
 import parser from "@/utils/parser";
 
-import BarImage from "@/assets/images/bar.jpg";
-import PageImage from "@/assets/images/Scene14.gif";
+import BarImage from "@/assets/images/bar.webp";
+import PageImage from "@/assets/images/Scene14.webp";
 
 interface HeroProps {
   accessToken: string | undefined;

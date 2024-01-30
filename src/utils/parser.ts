@@ -1,9 +1,9 @@
-import BlueLagoon from "@/assets/elements/blue-lagoon.png";
-import Cosmo from "@/assets/elements/cosmopolitan.png";
-import Gin from "@/assets/elements/gin-and-tonic.png";
-import Lavender from "@/assets/elements/lavender-lemonade.png";
-import Pina from "@/assets/elements/pina-colada.png";
-import SBSangria from "@/assets/elements/summer-berry-sangria.png";
+import BlueLagoon from "@/assets/elements/blue-lagoon.webp";
+import Cosmo from "@/assets/elements/cosmopolitan.webp";
+import Gin from "@/assets/elements/gin-and-tonic.webp";
+import Lavender from "@/assets/elements/lavender-lemonade.webp";
+import Pina from "@/assets/elements/pina-colada.webp";
+import SBSangria from "@/assets/elements/summer-berry-sangria.webp";
 import { NAME } from "@/data/cocktail";
 
 const parser = (

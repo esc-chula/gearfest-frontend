@@ -1,0 +1,12 @@
+---
+import InfiniteAnimateScene from "@/layouts/story/InfiniteAnimateScene.astro";
+const { cookies } = Astro;
+
+const answer = cookies.get("q13")?.value;
+---
+
+<InfiniteAnimateScene
+  noBubble={true}
+  text={answer}
+  redirect="/story/scene12-2"
+/>
