@@ -2,14 +2,15 @@ import { defineMiddleware } from "astro:middleware";
 
 export const onRequest = defineMiddleware(
   ({ cookies, request, redirect }, next) => {
-    const cookie = cookies.get("sb-access-token")?.value;
+    const token = cookies.get("sb-access-token")?.value;
 
     if (
       (request.url.includes("/story") || request.url.includes("/cocktail")) &&
-      !cookie
+      !token
     ) {
       return redirect("/");
     }
+
     return next();
   }
 );

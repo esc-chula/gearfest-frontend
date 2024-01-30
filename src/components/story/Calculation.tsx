@@ -1,11 +1,9 @@
 import scores from "@/store/score";
 import { useStore } from "@nanostores/react";
 import { useEffect } from "react";
-import { useCookies } from "react-cookie";
 
 const Calculation = () => {
   const $scores = useStore(scores);
-  const setCookie = useCookies(["cocktail"])[1];
 
   useEffect(() => {
     const url: Record<number, string> = {
@@ -24,7 +22,7 @@ const Calculation = () => {
     }
     const maxScore = Math.max(...product);
     const maxKey = product.indexOf(maxScore);
-    setCookie("cocktail", url[maxKey].toString());
+    localStorage.setItem("cocktail", url[maxKey]);
     if (window) window.location.href = "/cocktail/" + url[maxKey];
   }, []);
 };
