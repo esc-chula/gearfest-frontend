@@ -1,6 +1,7 @@
 import BarImage from "@/assets/images/bar.jpg";
 import PageImage from "@/assets/images/scene14.gif";
-import { useCallback } from "react";
+import parser from "@/utils/parser";
+import { useCallback, useMemo } from "react";
 import { useCookies } from "react-cookie";
 
 interface HeroProps {
@@ -9,6 +10,10 @@ interface HeroProps {
 }
 
 const Hero = ({ accessToken, cocktail }: HeroProps): JSX.Element => {
+  const cocktailInfo = useMemo(() => {
+    return parser(cocktail);
+  }, [cocktail]);
+
   const removeCookie = useCookies(["cocktail"])[2];
 
   const handleReset = useCallback(async () => {
@@ -26,9 +31,22 @@ const Hero = ({ accessToken, cocktail }: HeroProps): JSX.Element => {
           alt="Bar Image"
           className="h-full w-full object-cover"
         />
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-          {cocktail}
-        </div>
+        {cocktail && (
+          <div
+            className={`absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 transform flex-col items-center justify-center gap-y-2`}
+          >
+            <div>
+              <img
+                src={cocktailInfo.image}
+                className="h-48 w-48 object-contain object-center"
+                alt={cocktailInfo.name}
+              />
+            </div>
+            <h3 className="text-center text-xl font-semibold text-white">
+              {cocktailInfo.name}
+            </h3>
+          </div>
+        )}
       </div>
       <div className="w-full space-y-4">
         {cocktail && (
