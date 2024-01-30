@@ -34,6 +34,11 @@ const { pageTitle = "GearFestival" } = Astro.props;
         src: ["/music/night-jazz.mp3"],
         loop: true,
         volume: 0.5,
+        onplayerror: function () {
+          sound.once("unlock", function () {
+            sound.play();
+          });
+        },
       });
       document.addEventListener("astro:page-load", () => {
         if (window.location.pathname === "/story/scene1") {
