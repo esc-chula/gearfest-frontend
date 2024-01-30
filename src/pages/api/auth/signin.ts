@@ -9,7 +9,7 @@ export const POST: APIRoute = async ({ redirect }) => {
     options: {
       redirectTo: import.meta.env.DEV
         ? "http://localhost:4321/api/auth/callback"
-        : "https://www.gearfest2024.com/api/auth/callback",
+        : "https://www.gearfestival2024.com/api/auth/callback",
     },
   });
 
