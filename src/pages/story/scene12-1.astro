@@ -5,4 +5,8 @@ const { cookies } = Astro;
 const answer = cookies.get("q13")?.value;
 ---
 
-<InfiniteAnimateScene text={answer} redirect="/story/scene12-2" />
+<InfiniteAnimateScene
+  noBubble={true}
+  text={answer}
+  redirect="/story/scene12-2"
+/>
