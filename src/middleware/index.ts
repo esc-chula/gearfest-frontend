@@ -12,7 +12,7 @@ export const onRequest = defineMiddleware(
       return redirect("/");
     }
 
-    if (!request.url.includes("/cocktail") && cocktail) {
+    if (request.url.includes("/story") && cocktail) {
       return redirect("/cocktail/" + cocktail);
     }
     return next();
