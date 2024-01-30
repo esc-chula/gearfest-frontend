@@ -1,5 +1,5 @@
-import BarImage from "@/assets/images/bar.jpg";
-import PageImage from "@/assets/images/Scene14.gif";
+import BarImage from "@/assets/images/bar.webp";
+import PageImage from "@/assets/images/Scene14.webp";
 import parser from "@/utils/parser";
 import { useCallback, useMemo } from "react";
 import { useCookies } from "react-cookie";
