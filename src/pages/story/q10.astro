@@ -1,0 +1,17 @@
+---
+import Button from "@/components/story/Button";
+import ChoiceCard from "@/components/story/ChoiceCard";
+import QLayout from "@/layouts/story/QLayout.astro";
+---
+
+<QLayout>
+  <form
+    class="flex w-full flex-col items-center justify-center gap-8"
+    action="/story/q11a"
+  >
+    <ChoiceCard header="การที่คุณเข้าบาร์นี้มา ทำให้คุณมีความสุขไหม">
+      <Button client:load text="มี" />
+      <Button client:load text="เฉย ๆ" />
+    </ChoiceCard>
+  </form>
+</QLayout>

@@ -1,0 +1,19 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Scene2Anim from "@/components/story/bg-animation/NoStoryLoop";
+
+import img1 from "@/assets/scene/scene8/1.png";
+import img2 from "@/assets/scene/scene8/2.png";
+import img3 from "@/assets/scene/scene8/3.png";
+import img4 from "@/assets/scene/scene8/4.png";
+import img5 from "@/assets/scene/scene8/5.png";
+---
+
+<BaseLayout>
+  <Scene2Anim
+    client:load
+    scene={[img1, img2, img3, img4, img5]}
+    endText="โทรศัพท์ของคุณแจ้งเตือนเมลจากหัวหน้าของคุณให้คอยไปดูงานที่ต่างจังหวัด"
+    redirect="/story/q8"
+  />
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+import Button from "@/components/story/Button";
+import ChoiceCard from "@/components/story/ChoiceCard";
+import QLayout from "@/layouts/story/QLayout.astro";
+---
+
+<QLayout>
+  <form
+    class="flex w-full flex-col items-center justify-center gap-8"
+    action="/story/q5"
+  >
+    <ChoiceCard header="บาร์เทนเดอร์ถามคุณว่า\nวันนี้คุณอยากดื่มอะไร">
+      <Button client:load text="วิสกี้" />
+      <Button client:load text="จิน" />
+      <Button client:load text="วอดก้า" />
+      <Button client:load text="รัม" />
+    </ChoiceCard>
+  </form>
+</QLayout>

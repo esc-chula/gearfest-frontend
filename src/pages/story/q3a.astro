@@ -1,0 +1,33 @@
+---
+import QLayout from "@/layouts/story/QLayout.astro";
+import ScoredButton from "@/components/story/ScoredButton";
+import ChoiceCard from "@/components/story/ChoiceCard";
+---
+
+<QLayout>
+  <form
+    class="flex w-full flex-col items-center justify-center gap-8"
+    action="/story/transition2-3"
+  >
+    <ChoiceCard header="บรรยากาศในร้านเป็นแบบใด">
+      <ScoredButton
+        client:load
+        text="ตกแต่งเรียบหรู"
+        scores={[2, 0, 0, 1, 0, 1]}
+        multiplier={1.5}
+      />
+      <ScoredButton
+        client:load
+        text="แสงสีจัดเต็ม พร้อมปาร์ตี้สุด ๆ"
+        scores={[0, 1, 2, 0, 2, 0]}
+        multiplier={1.5}
+      />
+      <ScoredButton
+        client:load
+        text="แปลกใหม่ไม่เหมือนใคร"
+        scores={[0, 2, 1, 0, 1, 0]}
+        multiplier={1.5}
+      />
+    </ChoiceCard>
+  </form>
+</QLayout>
