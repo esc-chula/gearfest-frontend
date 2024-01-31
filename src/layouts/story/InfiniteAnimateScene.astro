@@ -11,22 +11,31 @@ interface Props {
   text?: string;
   redirect: string;
   img?: ImageMetadata;
+  imgLowRes?: ImageMetadata;
 }
 
-const { text, redirect, img, noBubble } = Astro.props;
+const { text, redirect, img, imgLowRes, noBubble } = Astro.props;
 ---
 
 <BaseLayout>
   {
     img ? (
       <Image
-        class="absolute h-full w-full object-cover"
+        class="absolute -z-10 h-full w-full object-cover"
         src={img}
         alt=""
         aria-hidden
       />
     ) : (
       <div class="absolute h-full w-full bg-black" aria-hidden />
+    )
+  }
+  {
+    imgLowRes && (
+      <div
+        class="absolute -z-20 h-full w-full bg-cover bg-center object-cover"
+        style={`background-image: url(${imgLowRes.src});`}
+      />
     )
   }
   {

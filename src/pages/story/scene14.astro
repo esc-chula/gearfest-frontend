@@ -2,6 +2,11 @@
 import InfiniteAnimateScene from "@/layouts/story/InfiniteAnimateScene.astro";
 
 import Scene from "@/assets/images/Scene14.webp";
+import SceneLowRes from "@/assets/images/Scene14-low-res.webp";
 ---
 
-<InfiniteAnimateScene img={Scene} redirect="/cocktail/calculation" />
+<InfiniteAnimateScene
+  img={Scene}
+  imgLowRes={SceneLowRes}
+  redirect="/cocktail/calculation"
+/>
