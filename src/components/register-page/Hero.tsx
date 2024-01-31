@@ -1,3 +1,4 @@
+import { navigate } from "astro:transitions/client";
 import { useCallback, useMemo } from "react";
 import { useCookies } from "react-cookie";
 
@@ -7,11 +8,10 @@ import BarImage from "@/assets/images/bar.webp";
 import PageImage from "@/assets/images/Scene14.webp";
 
 interface HeroProps {
-  accessToken: string | undefined;
   cocktail: string | undefined;
 }
 
-const Hero = ({ accessToken, cocktail }: HeroProps): JSX.Element => {
+const Hero = ({ cocktail }: HeroProps): JSX.Element => {
   const cocktailInfo = useMemo(() => {
     return parser(cocktail);
   }, [cocktail]);
@@ -19,10 +19,10 @@ const Hero = ({ accessToken, cocktail }: HeroProps): JSX.Element => {
   const removeCookie = useCookies(["cocktail"])[2];
 
   const handleReset = useCallback(async () => {
-    localStorage.removeItem("scores");
+    if (localStorage.getItem("scores")) localStorage.removeItem("scores");
     removeCookie("cocktail", { path: "/" });
 
-    window.location.href = "/story/scene1";
+    navigate("/story/scene1");
   }, []);
 
   return (
@@ -50,53 +50,12 @@ const Hero = ({ accessToken, cocktail }: HeroProps): JSX.Element => {
           </div>
         )}
       </div>
-      <div className="flex w-full flex-col space-y-4">
-        {cocktail && (
-          <button
-            onClick={handleReset}
-            type="button"
-            className="flex h-fit w-full flex-wrap items-center justify-center gap-6 rounded-lg bg-gray px-4 py-2.5 text-center font-sukhumvit text-xl font-bold text-primary shadow-button outline-none"
-          >
-            ทำแบบทดสอบอีกครั้ง
-          </button>
-        )}
-
-        {!cocktail && accessToken && (
-          <a href="/story/scene1">
-            <button
-              type="button"
-              className="flex h-fit w-full flex-wrap items-center justify-center gap-6 rounded-lg bg-gray px-4 py-2.5 text-center font-sukhumvit text-xl font-bold text-primary shadow-button outline-none"
-            >
-              เริ่มต้นการทำแบบทดสอบ
-            </button>
-          </a>
-        )}
-
-        {!cocktail && !accessToken && (
-          <form action="/api/auth/signin" method="post" data-astro-reload>
-            <button
-              value="google"
-              name="provider"
-              type="submit"
-              className="flex h-fit w-full flex-wrap items-center justify-center gap-2 rounded-lg bg-gray px-4 py-2.5 text-center font-sukhumvit text-xl font-bold text-primary shadow-button outline-none"
-            >
-              <i className="icon-[devicon--google] h-5 w-5"></i>Sign in with
-              google
-            </button>
-          </form>
-        )}
-
-        {accessToken && (
-          <a href="/api/auth/signout">
-            <button
-              type="button"
-              className="mx-auto flex h-fit flex-wrap items-center justify-center rounded-lg bg-primary px-4 py-1.5 text-center font-sukhumvit font-bold text-gray shadow-button outline-none"
-            >
-              Sign out
-            </button>
-          </a>
-        )}
-      </div>
+      <button
+        onClick={handleReset}
+        className="flex h-fit w-full flex-wrap items-center justify-center gap-6 rounded-lg bg-gray px-4 py-2.5 text-center font-sukhumvit text-xl font-bold text-primary shadow-button outline-none"
+      >
+        {cocktail ? "ทำแบบทดสอบอีกครั้ง" : "เริ่มต้นการทำแบบทดสอบ"}
+      </button>
     </div>
   );
 };

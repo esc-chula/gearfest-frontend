@@ -44,7 +44,7 @@ const { pageTitle = "GearFestival" } = Astro.props;
       document.addEventListener("astro:page-load", () => {
         if (window.location.pathname === "/story/scene1") {
           sound.play();
-        } else if (!window.location.pathname.startsWith("/story")) {
+        } else if (window.location.pathname === "/") {
           sound.stop();
         }
       });
