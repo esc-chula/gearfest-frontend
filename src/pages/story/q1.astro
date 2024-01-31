@@ -6,6 +6,7 @@ import ScoredButton from "@/components/story/ScoredButton";
 import ChoiceCard from "@/components/story/ChoiceCard";
 
 import Bar from "@/assets/images/bar.webp";
+import BarLowRes from "@/assets/images/bar-low-res.webp";
 ---
 
 <BaseLayout>
@@ -15,6 +16,11 @@ import Bar from "@/assets/images/bar.webp";
     alt=""
     aria-hidden
   />
+  <div
+    class="absolute -z-20 h-full w-full bg-cover bg-center"
+    style={`background-image: url(${BarLowRes.src});`}
+  >
+  </div>
   <form
     class="flex w-full flex-col items-center justify-center gap-8"
     action="/story/q2"

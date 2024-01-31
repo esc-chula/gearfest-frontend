@@ -7,6 +7,7 @@ import Textbox from "@/components/story/Textbox";
 import Button from "@/components/story/Button";
 
 import Bar from "@/assets/images/bar.webp";
+import BarLowRes from "@/assets/images/bar-low-res.webp";
 
 interface Props {
   id?: string;
@@ -24,6 +25,11 @@ const { text, redirect, id } = Astro.props;
     alt=""
     aria-hidden
   />
+  <div
+    class="absolute -z-20 h-full w-full bg-cover bg-center"
+    style={`background-image: url(${BarLowRes.src});`}
+  >
+  </div>
   <form action={redirect} class="z-10 mx-auto my-auto max-w-full px-8">
     <ChoiceCard header={text}>
       <Textbox client:load id={id} />
