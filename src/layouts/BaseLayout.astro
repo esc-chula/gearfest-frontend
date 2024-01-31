@@ -6,6 +6,7 @@ import "@fontsource/ibm-plex-sans-thai/thai-500.css";
 import "@/styles/global.css";
 
 import { ViewTransitions } from "astro:transitions";
+import BGM from "@/components/story/BGM";
 interface Props {
   pageTitle?: string;
 }
@@ -29,26 +30,6 @@ const { pageTitle = "GearFestival" } = Astro.props;
     >
       <slot />
     </main>
-    <script>
-      import { Howl } from "howler";
-      const sound = new Howl({
-        src: ["/music/night-jazz.mp3"],
-        loop: true,
-        volume: 0.5,
-        html5: true,
-        onplayerror: function () {
-          sound.once("unlock", function () {
-            sound.play();
-          });
-        },
-      });
-      document.addEventListener("astro:page-load", () => {
-        if (window.location.pathname === "/story/scene1") {
-          sound.play();
-        } else if (window.location.pathname === "/") {
-          sound.stop();
-        }
-      });
-    </script>
+    <BGM client:only />
   </body>
 </html>
