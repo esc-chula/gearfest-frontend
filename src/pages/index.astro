@@ -10,10 +10,6 @@ import Hero from "@/components/register-page/Hero.tsx";
 import escLogo from "@/assets/logo/esc-logo.webp";
 import gearfestLogo from "@/assets/logo/gearfest-logo.webp";
 import kntuLogo from "@/assets/logo/kntu-logo.webp";
-
-const { cookies } = Astro;
-
-const cocktail = cookies.get("cocktail")?.value;
 ---
 
 <BaseLayout pageTitle="Login">
@@ -34,7 +30,7 @@ const cocktail = cookies.get("cocktail")?.value;
           class="rounded-full backdrop-blur-lg"
         />
       </div>
-      <Hero client:load cocktail={cocktail} />
+      <Hero client:load />
     </div>
   </SignInBackground>
 </BaseLayout>

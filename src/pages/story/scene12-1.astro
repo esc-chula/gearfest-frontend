@@ -1,14 +1,14 @@
 ---
-export const prerender = false;
-
-import InfiniteAnimateScene from "@/layouts/story/InfiniteAnimateScene.astro";
-const { cookies } = Astro;
-
-const answer = cookies.get("q13")?.value;
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Tap from "@/components/story/Tap";
+import CookieText from "@/components/story/CookieText";
 ---
 
-<InfiniteAnimateScene
-  noBubble={true}
-  text={answer}
-  redirect="/story/scene12-2"
-/>
+<BaseLayout>
+  <div
+    class="absolute left-1/2 top-1/2 z-50 flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center px-12 text-center font-bold text-white"
+  >
+    <CookieText cookiePath="q13" client:only />
+  </div>
+  <Tap client:load redirect="/story/scene12-2" />
+</BaseLayout>

@@ -7,16 +7,15 @@ import parser from "@/utils/parser";
 import BarImage from "@/assets/images/bar.webp";
 import PageImage from "@/assets/images/Scene14-low-res.webp";
 
-interface HeroProps {
-  cocktail: string | undefined;
-}
-
-const Hero = ({ cocktail }: HeroProps): JSX.Element => {
-  const cocktailInfo = useMemo(() => {
-    return parser(cocktail);
-  }, [cocktail]);
-
+const Hero = (): JSX.Element => {
+  const cookies = useCookies(["cocktail"])[0];
   const removeCookie = useCookies(["cocktail"])[2];
+
+  const cocktail = cookies["cocktail"];
+
+  const cocktailInfo = useMemo(() => {
+    return parser(cookies["cocktail"]);
+  }, [cookies]);
 
   const handleReset = useCallback(async () => {
     if (localStorage.getItem("scores")) localStorage.removeItem("scores");
