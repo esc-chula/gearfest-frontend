@@ -44,7 +44,7 @@ const ButtonSet = ({ variant }: Props): JSX.Element => {
             <button
               className={cn(
                 `flex w-full flex-wrap items-center justify-center gap-2 rounded-3xl border border-rose-200 px-3 py-1.5
-      text-center font-semibold shadow-md outline-none`,
+      text-center font-mitr font-semibold shadow-md outline-none`,
                 BACKGROUND_BOX[variant],
                 TEXT[variant]
               )}
