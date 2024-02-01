@@ -1,0 +1,48 @@
+---
+export const prerender = false;
+
+import { Image } from "astro:assets";
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SignInBackground from "@/layouts/SignInBackground.astro";
+
+import escLogo from "@/assets/logo/esc-logo.webp";
+import gearfestLogo from "@/assets/logo/gearfest-logo.webp";
+import kntuLogo from "@/assets/logo/kntu-logo.webp";
+
+import DonateCode from "@/assets/images/gearfest-donate.webp";
+---
+
+<BaseLayout pageTitle="Login">
+  <SignInBackground>
+    <div
+      class="relative flex h-full w-full flex-col items-center justify-center px-14 py-8"
+    >
+      <div class="mb-6 grid grid-cols-3">
+        <Image src={escLogo} alt="ESC" class="rounded-full backdrop-blur-lg" />
+        <Image
+          src={gearfestLogo}
+          alt="Gear Festival 2023"
+          class="rounded-full backdrop-blur-lg"
+        />
+        <Image
+          src={kntuLogo}
+          alt="KNTU"
+          class="rounded-full backdrop-blur-lg"
+        />
+      </div>
+      <div class="space-y-8">
+        <Image src={DonateCode} alt="Donate Code" class="rounded-lg" />
+        <div
+          class="rounded-lg bg-gray px-6 py-2 text-center text-xs text-primary shadow-lg"
+        >
+          ขอเชิญทุกท่านร่วมสมทบทุนการส่งเสริมการศึกษา
+          รายได้หลังหักค่าใช้จ่ายจะนำไปบริจาคให้กับ โรงเรียนวัดสำมะกัน
+          (เปี่ยมวิทยาราษฎร์บำรุง) อำเภอนครหลวง จังหวัดพระนครศรีอยุธยา
+          สามารถบริจาคได้ตั้งแต่วันนี้ - 2 กุมภาพันธ์ 2567
+          มาร่วมทำบุญและส่งเสริมสังคมที่ดีไปด้วยกันนะคะ
+        </div>
+      </div>
+    </div>
+  </SignInBackground>
+</BaseLayout>
