@@ -41,7 +41,6 @@
     "vite": "5.0.12"
   },
   "devDependencies": {
-    "@iconify-json/devicon": "1.1.33",
     "@iconify-json/mdi": "1.1.63",
     "@iconify/tailwind": "0.1.4",
     "@types/howler": "2.2.11",
