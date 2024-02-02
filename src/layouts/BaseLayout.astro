@@ -6,22 +6,65 @@ import "@fontsource/ibm-plex-sans-thai/thai-500.css";
 import "@/styles/global.css";
 
 import { ViewTransitions } from "astro:transitions";
+import { SEO } from "astro-seo";
 import BGM from "@/components/story/BGM";
 interface Props {
   pageTitle?: string;
 }
 
-const { pageTitle = "GearFestival" } = Astro.props;
+const { pageTitle = "GearFestival | Find your cocktail !" } = Astro.props;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#864974" />
-    <title>{pageTitle}</title>
+    <SEO
+      title={pageTitle}
+      description="มาร่วมค้นหาค็อกเทลที่ตรงใจคุณกับงาน Gear Festival 2024 TU X CU ในวันที่ 2 กุมภาพันธ์ 2567 ติดตามรายละเอียดเพิ่มเติมได้ผ่านทาง IG: gearfestival_official"
+      openGraph={{
+        basic: {
+          title: pageTitle,
+          type: "website",
+          image: "/gearfest.webp",
+        },
+      }}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", href: "/favicon.png", type: "image/svg+xml" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "viewport",
+            content: "width=device-width, initial-scale=1",
+          },
+          {
+            name: "generator",
+            content: Astro.generator,
+          },
+          {
+            name: "theme-color",
+            content: "#864974",
+          },
+          {
+            name: "twitter:card",
+            content: "summary_large_image",
+          },
+          {
+            name: "twitter:title",
+            content: pageTitle,
+          },
+          {
+            name: "twitter:description",
+            content:
+              "มาร่วมค้นหาค็อกเทลที่ตรงใจคุณกับงาน Gear Festival 2024 TU X CU ในวันที่ 2 กุมภาพันธ์ 2567 ติดตามรายละเอียดเพิ่มเติมได้ผ่านทาง IG: gearfestival_official",
+          },
+          {
+            name: "twitter:image",
+            content: "/gearfest.webp",
+          },
+        ],
+      }}
+    />
     <ViewTransitions />
 
     <!-- Google tag (gtag.js) -->
