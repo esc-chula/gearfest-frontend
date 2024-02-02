@@ -55,6 +55,23 @@ const Hero = (): JSX.Element => {
       >
         {cocktail ? "ทำแบบทดสอบอีกครั้ง" : "เริ่มต้นการทำแบบทดสอบ"}
       </button>
+
+      <div className="flex flex-col items-center justify-center gap-2">
+        <a href="https://www.instagram.com/gearfestival_official/">
+          <button className="flex flex-row justify-center gap-4 rounded-lg bg-primary px-4 py-2 font-bold text-white">
+            <i className="icon-[skill-icons--instagram] h-6 w-6"></i>
+            gearfestival_official
+          </button>
+        </a>
+        <a href="https://www.tiktok.com/@gearfestival_official">
+          <button className="flex flex-row justify-center gap-4 rounded-lg bg-primary px-4 py-2 font-bold text-white">
+            <div className="flex h-6 w-6 flex-col items-center justify-center rounded bg-black">
+              <i className="icon-[fa6-brands--tiktok] h-4 w-4"></i>
+            </div>
+            gearfestival_official
+          </button>
+        </a>
+      </div>
     </div>
   );
 };

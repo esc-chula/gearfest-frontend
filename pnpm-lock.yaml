@@ -20,6 +20,12 @@ dependencies:
   '@fontsource/mitr':
     specifier: 5.0.8
     version: 5.0.8
+  '@iconify-json/fa6-brands':
+    specifier: 1.1.18
+    version: 1.1.18
+  '@iconify-json/skill-icons':
+    specifier: 1.1.7
+    version: 1.1.7
   '@nanostores/persistent':
     specifier: 0.9.1
     version: 0.9.1(nanostores@0.9.5)
@@ -847,11 +853,23 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
+  /@iconify-json/fa6-brands@1.1.18:
+    resolution: {integrity: sha512-vmeJP06Xbj0XbVGiBHg0q8H3M894d4bGXKCmiHt6JqUdpiGcIV7r96N+BOU4ZS1+hvpV57fTfXlFPiUfxAIfkg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
   /@iconify-json/mdi@1.1.63:
     resolution: {integrity: sha512-b07dRM5LYdwJqd/lm+1+JDNDNSWHvpZ7ujb73oJxx3lmK1J0giDS0BSc4yia0hixNV0Z2q/4GyxAu/A8XqDnbg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
+
+  /@iconify-json/skill-icons@1.1.7:
+    resolution: {integrity: sha512-nN2Cb7B2oMJnwLnG8ZY/l/kKQqrSEQXZmHPpLtqDL7uDw4+4sqgGB+LxjDLFGvXY5HVe538sv3PJikPfMnxesg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
 
   /@iconify/tailwind@0.1.4:
     resolution: {integrity: sha512-U7RzcU2fkwOfMDsGQ3mtpLIaApSnqb+vgcJJknPPbg8/NF5s7tI1o5otEMfcpnLGk4PbYB8bxmKTz7IJVUlU2Q==}
@@ -861,7 +879,6 @@ packages:
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: true
 
   /@img/sharp-darwin-arm64@0.33.2:
     resolution: {integrity: sha512-itHBs1rPmsmGF9p4qRe++CzCgd+kFYktnsoR1sbIAfsRMrJZau0Tt1AH9KVnufc2/tU02Gf6Ibujx+15qRE03w==}

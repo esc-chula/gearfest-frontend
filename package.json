@@ -17,6 +17,8 @@
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/ibm-plex-sans-thai": "5.0.8",
     "@fontsource/mitr": "5.0.8",
+    "@iconify-json/fa6-brands": "1.1.18",
+    "@iconify-json/skill-icons": "1.1.7",
     "@nanostores/persistent": "0.9.1",
     "@nanostores/react": "0.7.1",
     "@types/react": "^18.2.48",
