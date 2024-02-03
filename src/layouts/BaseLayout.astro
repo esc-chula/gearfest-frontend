@@ -15,33 +15,47 @@ interface Props {
 const { pageTitle = "GearFestival | Find your cocktail !" } = Astro.props;
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <SEO
       title={pageTitle}
       description="มาร่วมค้นหาค็อกเทลที่ตรงใจคุณกับงาน Gear Festival 2024 TU X CU ในวันที่ 2 กุมภาพันธ์ 2567 ติดตามรายละเอียดเพิ่มเติมได้ผ่านทาง IG: gearfestival_official"
       titleDefault="GearFestival | Find your cocktail !"
-      charset="utf-8"
+      charset="UTF-8"
       openGraph={{
         basic: {
           title: pageTitle,
           type: "website",
           image: "/gearfest.jpg",
         },
+        image: {
+          type: "image/jpeg",
+          secureUrl: "www.gearfestival2024.com/gearfest.jpg",
+          alt: "Gear Festival 2024 TU X CU",
+          width: 1200,
+          height: 630,
+        },
       }}
       twitter={{
+        creator: "@shalluv_",
         card: "summary_large_image",
         title: pageTitle,
         description:
           "มาร่วมค้นหาค็อกเทลที่ตรงใจคุณกับงาน Gear Festival 2024 TU X CU ในวันที่ 2 กุมภาพันธ์ 2567 ติดตามรายละเอียดเพิ่มเติมได้ผ่านทาง IG: gearfestival_official",
         image: "/gearfest.jpg",
+        imageAlt: "Gear Festival 2024 TU X CU",
       }}
       extend={{
         link: [{ rel: "icon", href: "/favicon.png", type: "image/svg+xml" }],
         meta: [
           {
+            httpEquiv: "X-UA-Compatible",
+            content: "IE=edge",
+          },
+          {
             name: "viewport",
-            content: "width=device-width, initial-scale=1",
+            content: "width=device-width, initial-scale=1.0",
           },
           {
             name: "generator",
