@@ -17,21 +17,27 @@ const { pageTitle = "GearFestival | Find your cocktail !" } = Astro.props;
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
     <SEO
       title={pageTitle}
       description="มาร่วมค้นหาค็อกเทลที่ตรงใจคุณกับงาน Gear Festival 2024 TU X CU ในวันที่ 2 กุมภาพันธ์ 2567 ติดตามรายละเอียดเพิ่มเติมได้ผ่านทาง IG: gearfestival_official"
+      titleDefault="GearFestival | Find your cocktail !"
+      charset="utf-8"
       openGraph={{
         basic: {
           title: pageTitle,
           type: "website",
-          image: "/gearfest.webp",
+          image: "https://www.gearfestival2024.com/gearfest.webp",
         },
       }}
+      twitter={{
+        card: "summary_large_image",
+        title: pageTitle,
+        description:
+          "มาร่วมค้นหาค็อกเทลที่ตรงใจคุณกับงาน Gear Festival 2024 TU X CU ในวันที่ 2 กุมภาพันธ์ 2567 ติดตามรายละเอียดเพิ่มเติมได้ผ่านทาง IG: gearfestival_official",
+        image: "https://www.gearfestival2024.com/gearfest.webp",
+      }}
       extend={{
-        // extending the default link tags
         link: [{ rel: "icon", href: "/favicon.png", type: "image/svg+xml" }],
-        // extending the default meta tags
         meta: [
           {
             name: "viewport",
@@ -44,23 +50,6 @@ const { pageTitle = "GearFestival | Find your cocktail !" } = Astro.props;
           {
             name: "theme-color",
             content: "#864974",
-          },
-          {
-            name: "twitter:card",
-            content: "summary_large_image",
-          },
-          {
-            name: "twitter:title",
-            content: pageTitle,
-          },
-          {
-            name: "twitter:description",
-            content:
-              "มาร่วมค้นหาค็อกเทลที่ตรงใจคุณกับงาน Gear Festival 2024 TU X CU ในวันที่ 2 กุมภาพันธ์ 2567 ติดตามรายละเอียดเพิ่มเติมได้ผ่านทาง IG: gearfestival_official",
-          },
-          {
-            name: "twitter:image",
-            content: "/gearfest.webp",
           },
         ],
       }}
@@ -82,6 +71,10 @@ const { pageTitle = "GearFestival | Find your cocktail !" } = Astro.props;
       // @ts-expect-error google tag
       gtag("config", "G-2V998MNL50");
     </script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2286362650818492"
+      crossorigin="anonymous"></script>
   </head>
   <body>
     <main
