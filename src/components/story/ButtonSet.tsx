@@ -39,25 +39,6 @@ const ButtonSet = ({ variant }: Props): JSX.Element => {
             </button>
           </a>
         </div>
-        <div>
-          <a href="/donate">
-            <button
-              className={cn(
-                `flex w-full flex-wrap items-center justify-center gap-2 rounded-3xl border border-rose-200 px-3 py-1.5
-      text-center font-mitr font-semibold shadow-md outline-none`,
-                BACKGROUND_BOX[variant],
-                TEXT[variant]
-              )}
-              type="button"
-            >
-              Donate Here !
-            </button>
-          </a>
-        </div>
-      </div>
-      <div className="text-center text-xs text-white">
-        **รายได้จากการบริจาคหลังหักค่าใช้จ่ายจะนำไปบริจาคให้น้อง ๆ
-        ในโรงเรียนที่จังหวัดพระนครศรีอยุธยา
       </div>
     </div>
   );
