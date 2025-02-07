@@ -58,7 +58,7 @@ const Hero = (): JSX.Element => {
 
       <div className="flex flex-col items-center justify-center gap-2">
         <a
-          href="https://www.instagram.com/gearfestival_official/"
+          href="https://www.instagram.com/gearfestival.official"
           target="_blank"
           rel="noreferrer noopener"
         >
